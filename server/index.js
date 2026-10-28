@@ -56,7 +56,7 @@ app.use((err, req, res, next) => {
 });
 
 // Start Server if directly executed
-if (process.env.NODE_ENV !== 'test') {
+if (process.env.NODE_ENV !== 'test' && !process.env.VERCEL) {
   app.listen(PORT, () => {
     console.log(`=======================================================`);
     console.log(` True Realty AI Property Assistant Backend is Running `);
