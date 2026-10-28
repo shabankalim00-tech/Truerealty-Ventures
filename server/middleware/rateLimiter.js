@@ -21,7 +21,7 @@ export function createRateLimiter({ windowMs = 60 * 1000, max = 50, message = 'T
   }, 5 * 60 * 1000).unref();
 
   return (req, res, next) => {
-    const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress || 'unknown-ip';
+    const ip = req.headers['x-forwarded-for'] || req.socket?.remoteAddress || 'unknown-ip';
     const now = Date.now();
 
     const timestamps = ipRequestMap.get(ip) || [];

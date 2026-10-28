@@ -7,7 +7,17 @@ import { createRateLimiter } from '../middleware/rateLimiter.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const leadsFile = path.resolve(__dirname, '../data/leads.json');
+
+// On serverless platforms like Vercel, the app root is read-only.
+// We use /tmp for persistence and maintain an in-memory buffer.
+const inMemoryLeads = [];
+
+function getLeadsFilePath() {
+  if (process.env.VERCEL || process.platform !== 'win32' && fs.existsSync('/tmp')) {
+    return path.resolve('/tmp', 'leads.json');
+  }
+  return path.resolve(__dirname, '../data/leads.json');
+}
 
 const router = express.Router();
 
@@ -110,20 +120,28 @@ router.post('/', leadLimiter, async (req, res) => {
       createdAt: new Date().toISOString(),
     };
 
-    // 6. Persist to leads.json
-    let existingLeads = [];
+    // 6. Record lead in-memory and write to disk/tmp safely
+    inMemoryLeads.unshift(leadRecord);
+    console.log('[NEW LEAD CAPTURED]:', JSON.stringify({
+      id: leadRecord.id,
+      name: leadRecord.name,
+      phone: leadRecord.phone,
+      property: leadRecord.propertyTitle || 'General',
+      timestamp: leadRecord.createdAt,
+    }));
+
     try {
+      const leadsFile = getLeadsFilePath();
+      let existingLeads = [];
       if (fs.existsSync(leadsFile)) {
         const raw = fs.readFileSync(leadsFile, 'utf-8');
         existingLeads = JSON.parse(raw);
       }
-    } catch (e) {
-      console.warn('Could not read existing leads file, creating fresh array:', e.message);
-      existingLeads = [];
+      existingLeads.unshift(leadRecord);
+      fs.writeFileSync(leadsFile, JSON.stringify(existingLeads, null, 2), 'utf-8');
+    } catch (fsError) {
+      console.warn('Filesystem write notice (handled gracefully for serverless):', fsError.message);
     }
-
-    existingLeads.push(leadRecord);
-    fs.writeFileSync(leadsFile, JSON.stringify(existingLeads, null, 2), 'utf-8');
 
     return res.status(201).json({
       success: true,
@@ -138,7 +156,7 @@ router.post('/', leadLimiter, async (req, res) => {
     console.error('Lead submission error:', error);
     return res.status(500).json({
       success: false,
-      error: 'PERSISTENCE_ERROR',
+      error: 'SERVER_ERROR',
       message: 'Failed to record your lead. Please try again or call our direct helpline.',
     });
   }
@@ -147,11 +165,23 @@ router.post('/', leadLimiter, async (req, res) => {
 // GET /api/leads - Admin view of leads
 router.get('/', (req, res) => {
   try {
-    if (!fs.existsSync(leadsFile)) {
-      return res.json({ success: true, leads: [] });
+    const leadsFile = getLeadsFilePath();
+    let leads = [...inMemoryLeads];
+    if (fs.existsSync(leadsFile)) {
+      try {
+        const raw = fs.readFileSync(leadsFile, 'utf-8');
+        const diskLeads = JSON.parse(raw);
+        const seenIds = new Set(leads.map((l) => l.id));
+        for (const dl of diskLeads) {
+          if (!seenIds.has(dl.id)) {
+            leads.push(dl);
+            seenIds.add(dl.id);
+          }
+        }
+      } catch (parseErr) {
+        console.warn('Failed to parse disk leads:', parseErr.message);
+      }
     }
-    const raw = fs.readFileSync(leadsFile, 'utf-8');
-    const leads = JSON.parse(raw);
     return res.json({ success: true, count: leads.length, leads });
   } catch (error) {
     return res.status(500).json({ success: false, error: 'READ_ERROR' });
