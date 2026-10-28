@@ -80,11 +80,12 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link to="/" className="flex items-center group py-0.5">
+            <Link to="/" className="flex items-center group py-1">
               <img
-                src="/logo.jpg"
+                src="/logo-horizontal.png"
                 alt="True Realty Venture"
-                className="h-16 sm:h-20 w-auto object-contain rounded-xl shadow-sm hover:opacity-95 transition"
+                className="h-10 sm:h-12 w-auto max-w-[210px] sm:max-w-[260px] object-contain transition-transform duration-200 group-hover:scale-[1.02]"
+                loading="eager"
               />
             </Link>
 

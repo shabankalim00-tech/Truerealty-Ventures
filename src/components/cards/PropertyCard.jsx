@@ -72,7 +72,7 @@ export default function PropertyCard({ property, onEnquireClick }) {
             <img
               src={primaryImage}
               alt={property.title}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 property-image"
               loading="lazy"
             />
           </Link>
@@ -123,7 +123,7 @@ export default function PropertyCard({ property, onEnquireClick }) {
           </div>
 
           {/* Bottom Gradient with Price Tag */}
-          <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent p-3 pt-6 flex justify-between items-end">
+          <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/70 via-slate-950/20 to-transparent p-3 pt-5 flex justify-between items-end">
             <div>
               <span className="text-[11px] font-medium text-slate-300">
                 {property.transactionType === 'Rent' ? 'Rent Price' : 'Total Price'}

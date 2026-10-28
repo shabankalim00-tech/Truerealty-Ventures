@@ -13,7 +13,7 @@ import {
 // Local storage helper
 function getStored(key, defaultVal) {
   try {
-    const val = localStorage.getItem(`truerealty_${key}`);
+    const val = localStorage.getItem(`truerealty_v2_${key}`);
     if (!val) return defaultVal;
     const parsed = JSON.parse(val);
     if (Array.isArray(defaultVal) && Array.isArray(parsed)) {
@@ -30,7 +30,7 @@ function getStored(key, defaultVal) {
 
 function setStored(key, value) {
   try {
-    localStorage.setItem(`truerealty_${key}`, JSON.stringify(value));
+    localStorage.setItem(`truerealty_v2_${key}`, JSON.stringify(value));
   } catch (e) {
     console.error('LocalStorage write error:', e);
   }

@@ -65,9 +65,9 @@ export default function CityDetailPage() {
         <img
           src={city.image || 'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200'}
           alt={city.name}
-          className="absolute inset-0 w-full h-full object-cover opacity-40"
+          className="absolute inset-0 w-full h-full object-cover opacity-65 property-image"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/35 to-transparent"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full space-y-3">
           <div className="inline-flex items-center space-x-2 text-xs font-bold uppercase tracking-wider text-gold-400">

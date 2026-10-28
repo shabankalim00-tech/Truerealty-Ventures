@@ -62,11 +62,11 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
           {/* Brand Info */}
           <div className="col-span-2">
-            <Link to="/" className="inline-block mb-5">
+            <Link to="/" className="inline-block mb-5 group">
               <img
-                src="/logo.jpg"
+                src="/logo-horizontal-dark.png"
                 alt="True Realty Venture"
-                className="h-20 sm:h-24 w-auto object-contain rounded-2xl shadow-md ring-1 ring-slate-800 hover:opacity-95 transition"
+                className="h-12 sm:h-14 w-auto max-w-[240px] sm:max-w-[280px] object-contain transition-opacity duration-200 group-hover:opacity-90"
               />
             </Link>
             <p className="text-xs leading-relaxed text-slate-400 max-w-sm mb-6">

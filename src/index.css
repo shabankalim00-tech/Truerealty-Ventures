@@ -26,3 +26,10 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
 }
+
+/* Enhanced Property Image Quality & Natural Realistic Clarity */
+.property-image {
+  filter: brightness(1.06) contrast(1.02);
+  transition: filter 0.3s ease, transform 0.5s ease;
+  image-rendering: -webkit-optimize-contrast;
+}

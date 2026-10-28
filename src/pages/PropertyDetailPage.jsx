@@ -33,6 +33,7 @@ export default function PropertyDetailPage() {
   const [loading, setLoading] = useState(true);
   const [leadModalOpen, setLeadModalOpen] = useState(false);
   const [isSaved, setIsSaved] = useState(false);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const { isAuthenticated } = useAuth();
 
   // Enquiry inline form state
@@ -49,6 +50,7 @@ export default function PropertyDetailPage() {
     const fetchProperty = async () => {
       try {
         setLoading(true);
+        setSelectedImageIndex(0);
         const res = await api.get(`/properties/${slug}`);
         if (res.success && res.data.property) {
           setProperty(res.data.property);
@@ -178,20 +180,20 @@ export default function PropertyDetailPage() {
 
         {/* Full Property Image Hero Section */}
         <div className="mb-10">
-          <div className="relative w-full h-[400px] sm:h-[480px] md:h-[540px] lg:h-[580px] rounded-3xl overflow-hidden bg-slate-900 shadow-xl border border-slate-200">
+          <div className="relative w-full h-[400px] sm:h-[480px] md:h-[540px] lg:h-[580px] rounded-3xl overflow-hidden bg-slate-100 shadow-xl border border-slate-200">
             {/* Full Hero Image (Fills container completely) */}
             <img
-              src={images[0]}
-              alt={property.title}
-              className="w-full h-full object-cover select-none transition-transform duration-700 hover:scale-105"
+              src={images[selectedImageIndex] || images[0]}
+              alt={`${property.title} view ${selectedImageIndex + 1}`}
+              className="w-full h-full object-cover select-none transition-transform duration-700 hover:scale-105 property-image"
             />
-            {/* Subtle Gradient Vignette Overlay for Badges */}
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-slate-950/30 pointer-events-none" />
+            {/* Subtle Vignette Overlay for Badges */}
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 via-transparent to-slate-950/10 pointer-events-none" />
 
             {/* Badges & Actions Overlay */}
             <div className="absolute top-4 left-4 z-20 flex items-center space-x-2">
               <span className="px-3.5 py-1.5 rounded-full text-xs font-bold text-slate-900 bg-white/95 backdrop-blur-md border border-slate-200 shadow-md">
-                Official Visual
+                Official Visual {images.length > 1 ? `(${selectedImageIndex + 1}/${images.length})` : ''}
               </span>
             </div>
 
@@ -206,6 +208,31 @@ export default function PropertyDetailPage() {
               </button>
             </div>
           </div>
+
+          {/* Interactive Gallery Thumbnails */}
+          {images.length > 1 && (
+            <div className="flex items-center gap-3 mt-4 overflow-x-auto pb-2 scrollbar-thin">
+              {images.map((img, idx) => (
+                <button
+                  key={idx}
+                  type="button"
+                  onClick={() => setSelectedImageIndex(idx)}
+                  className={`relative flex-shrink-0 w-24 h-16 sm:w-32 sm:h-20 rounded-xl overflow-hidden border-2 transition-all duration-200 ${
+                    selectedImageIndex === idx
+                      ? 'border-primary-600 ring-2 ring-primary-500/30 scale-105 shadow-md'
+                      : 'border-slate-200 hover:border-slate-400 opacity-75 hover:opacity-100'
+                  }`}
+                >
+                  <img
+                    src={img}
+                    alt={`${property.title} thumbnail ${idx + 1}`}
+                    className="w-full h-full object-cover property-image"
+                    loading="lazy"
+                  />
+                </button>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Action Buttons Row */}

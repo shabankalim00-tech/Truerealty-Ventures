@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import {
   Building2,
@@ -44,8 +44,34 @@ export default function HomePage() {
   const [loading, setLoading] = useState(true);
   const [leadModalOpen, setLeadModalOpen] = useState(false);
   const [selectedProperty, setSelectedProperty] = useState(null);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  const [videoFailed, setVideoFailed] = useState(false);
+  const videoRef = useRef(null);
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+      setPrefersReducedMotion(mediaQuery.matches);
+      const handler = (e) => setPrefersReducedMotion(e.matches);
+      mediaQuery.addEventListener('change', handler);
+      return () => mediaQuery.removeEventListener('change', handler);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (videoRef.current && !prefersReducedMotion && !videoFailed) {
+      videoRef.current.defaultMuted = true;
+      videoRef.current.muted = true;
+      const playPromise = videoRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise.catch((err) => {
+          console.warn('Hero video autoplay play() failed or deferred:', err);
+        });
+      }
+    }
+  }, [prefersReducedMotion, videoFailed]);
 
   useEffect(() => {
     const fetchHomeData = async () => {
@@ -78,29 +104,49 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col">
       {/* 1. HERO SECTION */}
-      <section className="relative min-h-[580px] lg:min-h-[640px] flex items-center justify-center bg-slate-950 text-white overflow-hidden py-16 px-4">
-        {/* Background Image & Luxury Gradient Overlay */}
-        <div className="absolute inset-0 z-0">
+      <section className="relative isolate min-h-[580px] lg:min-h-[660px] flex items-center justify-center bg-slate-950 text-white overflow-hidden py-16 px-4">
+        {/* Background Video / Static Fallback */}
+        {prefersReducedMotion || videoFailed ? (
           <img
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=85"
-            alt="True Realty Venture Luxury Real Estate"
-            className="w-full h-full object-cover object-center opacity-30"
+            src="/videos/hero-poster.jpg"
+            alt="True Realty Venture Luxury Real Estate & Premium Villas"
+            className="absolute inset-0 z-0 h-full w-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-slate-950/40"></div>
-        </div>
+        ) : (
+          <video
+            ref={videoRef}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            poster="/videos/hero-poster.jpg"
+            onError={() => {
+              console.warn('Hero video failed to load, falling back to static poster');
+              setVideoFailed(true);
+            }}
+            className="absolute inset-0 z-0 h-full w-full object-cover object-center"
+          >
+            <source src="/videos/hero-background.mp4" type="video/mp4" />
+            <source src="/videos/hero-background-720p.mp4" type="video/mp4" />
+          </video>
+        )}
+
+        {/* Cinematic gradient overlay for contrast and readability */}
+        <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-t from-slate-950/80 via-slate-950/35 to-slate-950/40" />
 
         {/* Hero Content */}
-        <div className="relative z-10 max-w-7xl mx-auto w-full text-center space-y-6">
-          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-slate-900/80 border border-slate-700/80 text-gold-400 text-xs font-semibold backdrop-blur-md">
+        <div className="relative z-20 max-w-7xl mx-auto w-full text-center space-y-6">
+          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-slate-900/80 border border-slate-700/80 text-gold-400 text-xs font-semibold backdrop-blur-md shadow-sm">
             <ShieldCheck className="w-4 h-4 text-emerald-400" />
             <span>Over 300+ Verified RERA Properties & 100+ Projects</span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white font-serif tracking-tight max-w-4xl mx-auto leading-tight">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white font-serif tracking-tight max-w-4xl mx-auto leading-tight drop-shadow-md">
             Find a Place You'll <span className="text-gold-400 italic">Love</span> to Call Home
           </h1>
 
-          <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto font-light">
+          <p className="text-base sm:text-lg text-slate-200 max-w-2xl mx-auto font-light drop-shadow-sm">
             Discover verified properties, new projects and trusted real-estate opportunities across India's premier micro-markets.
           </p>
 
@@ -211,9 +257,9 @@ export default function HomePage() {
                 <img
                   src={city.image || 'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400'}
                   alt={city.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 property-image"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent p-4 flex flex-col justify-end">
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-slate-950/25 to-transparent p-4 flex flex-col justify-end">
                   <h3 className="text-base font-bold text-white group-hover:text-gold-400 transition">
                     {city.name}
                   </h3>

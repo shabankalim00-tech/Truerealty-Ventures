@@ -44,9 +44,9 @@ export default function CityListingPage() {
                   <img
                     src={city.image || 'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=600'}
                     alt={city.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 property-image"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
                   <div className="absolute bottom-3 left-3 text-white">
                     <h3 className="text-xl font-bold font-serif">{city.name}</h3>
                     <span className="text-[11px] text-slate-300 font-medium">{city.state}</span>

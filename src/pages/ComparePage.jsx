@@ -65,7 +65,7 @@ export default function ComparePage() {
                       <img
                         src={item.images?.[0] || 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400'}
                         alt=""
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover property-image"
                       />
                       <button
                         onClick={() => removeFromCompare(item._id)}

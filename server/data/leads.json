@@ -1,0 +1,44 @@
+[
+  {
+    "id": "lead_1791980886590_ce6bd786",
+    "name": "Rohan Sharma",
+    "phone": "+91 9876543210",
+    "email": "rohan.sharma@example.com",
+    "preferredTime": "Evening 6 PM",
+    "query": "Interested in ATS Greens Pristine 3 BHK Noida",
+    "propertyId": "prop-demo-1",
+    "propertyTitle": "ATS Greens Pristine",
+    "consent": true,
+    "consentTimestamp": "2026-10-14T12:28:06.592Z",
+    "status": "NEW",
+    "createdAt": "2026-10-14T12:28:06.592Z"
+  },
+  {
+    "id": "lead_1791981127042_8fdfe72a",
+    "name": "Ananya Verma",
+    "phone": "+91 9812345678",
+    "email": null,
+    "preferredTime": "Evening (4 PM - 8 PM)",
+    "query": "General Inquiry via AI Assistant",
+    "propertyId": "prop-demo-1",
+    "propertyTitle": "ATS Greens Pristine - 3 BHK Premium Apartment",
+    "consent": true,
+    "consentTimestamp": "2026-10-14T12:32:07.042Z",
+    "status": "NEW",
+    "createdAt": "2026-10-14T12:32:07.042Z"
+  },
+  {
+    "id": "lead_1792045803322_71930aa2",
+    "name": "Rohan Sharma",
+    "phone": "+91 9876543210",
+    "email": "rohan.sharma@example.com",
+    "preferredTime": "Evening 6 PM",
+    "query": "Interested in ATS Greens Pristine 3 BHK Noida",
+    "propertyId": "prop-demo-1",
+    "propertyTitle": "ATS Greens Pristine",
+    "consent": true,
+    "consentTimestamp": "2026-10-15T06:30:03.324Z",
+    "status": "NEW",
+    "createdAt": "2026-10-15T06:30:03.324Z"
+  }
+]

@@ -20,7 +20,7 @@ export default function ProjectCard({ project }) {
             <img
               src={image}
               alt={project.name}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 property-image"
               loading="lazy"
             />
           </Link>
@@ -36,11 +36,18 @@ export default function ProjectCard({ project }) {
             </span>
           </div>
 
-          <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent p-3 pt-6">
-            <span className="text-[11px] font-medium text-slate-300">Starting From</span>
-            <div className="text-xl font-extrabold text-white font-serif">
-              {formatPrice(project.priceMin)} - {formatPrice(project.priceMax)}
+          <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/80 via-slate-950/30 to-transparent p-3 pt-5 flex justify-between items-end">
+            <div>
+              <span className="text-[11px] font-medium text-slate-300">Starting From</span>
+              <div className="text-xl font-extrabold text-white font-serif">
+                {formatPrice(project.priceMin)} - {formatPrice(project.priceMax)}
+              </div>
             </div>
+            {(project.pricePerSqFtDisplay || project.pricePerSqFt) && (
+              <span className="text-[10px] font-bold text-gold-300 bg-slate-900/80 backdrop-blur-sm px-2 py-1 rounded-md border border-gold-500/30 shrink-0">
+                {project.pricePerSqFtDisplay || `₹${project.pricePerSqFt.toLocaleString('en-IN')}/sq.ft`}
+              </span>
+            )}
           </div>
         </div>
 
@@ -66,6 +73,20 @@ export default function ProjectCard({ project }) {
           </div>
 
           <div className="space-y-1.5 text-xs text-slate-600 border-t border-slate-100 pt-3">
+            {project.sizeRange && (
+              <div className="flex justify-between items-center">
+                <span className="text-slate-400">Sizes (Sq.Ft):</span>
+                <span className="font-semibold text-slate-800">{project.sizeRange}</span>
+              </div>
+            )}
+            {(project.pricePerSqFtDisplay || project.pricePerSqFt) && (
+              <div className="flex justify-between items-center">
+                <span className="text-slate-400">Rate / Sq.Ft:</span>
+                <span className="font-bold text-primary-700">
+                  {project.pricePerSqFtDisplay || `₹${project.pricePerSqFt.toLocaleString('en-IN')} / sq.ft`}
+                </span>
+              </div>
+            )}
             <div className="flex justify-between items-center">
               <span className="text-slate-400">Configurations:</span>
               <span className="font-semibold text-slate-800">

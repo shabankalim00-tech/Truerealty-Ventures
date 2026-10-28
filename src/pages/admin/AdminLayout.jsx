@@ -46,9 +46,9 @@ export default function AdminLayout() {
   return (
     <div className="min-h-screen bg-slate-100 flex flex-col md:flex-row">
       {/* Mobile Top Header */}
-      <div className="md:hidden bg-slate-950 text-white p-3 flex justify-between items-center z-50">
+      <div className="md:hidden bg-slate-950 text-white p-3 px-4 flex justify-between items-center z-50 border-b border-slate-800">
         <Link to="/" className="flex items-center">
-          <img src="/logo.jpg" alt="True Realty Venture" className="h-10 w-auto rounded-lg object-contain" />
+          <img src="/logo-horizontal-dark.png" alt="True Realty Venture" className="h-9 w-auto object-contain" />
         </Link>
         <button
           onClick={() => setSidebarOpen(!sidebarOpen)}
@@ -66,12 +66,12 @@ export default function AdminLayout() {
       >
         <div>
           {/* Logo Header */}
-          <div className="p-5 border-b border-slate-800 flex justify-center">
-            <Link to="/" className="inline-block">
+          <div className="p-4 border-b border-slate-800 flex items-center justify-center">
+            <Link to="/" className="inline-block group">
               <img
-                src="/logo.jpg"
+                src="/logo-horizontal-dark.png"
                 alt="True Realty Venture"
-                className="h-16 w-auto object-contain rounded-xl ring-1 ring-slate-700 shadow-md hover:opacity-95 transition"
+                className="h-10 w-auto max-w-[200px] object-contain group-hover:opacity-90 transition"
               />
             </Link>
           </div>

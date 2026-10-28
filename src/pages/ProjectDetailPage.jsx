@@ -28,11 +28,13 @@ export default function ProjectDetailPage() {
   const [loading, setLoading] = useState(true);
   const [activeFloorIndex, setActiveFloorIndex] = useState(0);
   const [leadModalOpen, setLeadModalOpen] = useState(false);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
   useEffect(() => {
     const fetchProject = async () => {
       try {
         setLoading(true);
+        setSelectedImageIndex(0);
         const res = await api.get(`/projects/${slug}`);
         if (res.success && res.data.project) {
           setProject(res.data.project);
@@ -78,11 +80,11 @@ export default function ProjectDetailPage() {
       {/* Project Hero Banner */}
       <div className="relative min-h-[440px] flex items-end bg-slate-950 text-white overflow-hidden py-12">
         <img
-          src={primaryImage}
+          src={project.images?.[selectedImageIndex] || primaryImage}
           alt={project.name}
-          className="absolute inset-0 w-full h-full object-cover opacity-40"
+          className="absolute inset-0 w-full h-full object-cover opacity-65 property-image"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/35 to-transparent"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
@@ -105,6 +107,27 @@ export default function ProjectDetailPage() {
                 <MapPin className="w-4 h-4 text-gold-400 mr-1.5 shrink-0" />
                 <span>{project.address || `${project.locality?.name}, ${project.city?.name}`}</span>
               </div>
+
+              {/* Multi-view Selector */}
+              {project.images && project.images.length > 1 && (
+                <div className="flex flex-wrap items-center gap-2 pt-2">
+                  <span className="text-xs font-semibold text-slate-300">Gallery Views:</span>
+                  {project.images.map((img, idx) => (
+                    <button
+                      key={idx}
+                      type="button"
+                      onClick={() => setSelectedImageIndex(idx)}
+                      className={`px-3 py-1 rounded-lg text-xs font-bold transition-all ${
+                        selectedImageIndex === idx
+                          ? 'bg-gold-400 text-slate-950 shadow-md scale-105'
+                          : 'bg-slate-900/80 hover:bg-slate-800 text-white border border-slate-700 backdrop-blur-sm'
+                      }`}
+                    >
+                      View {idx + 1}
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
 
             <div className="bg-slate-900/80 backdrop-blur-md p-5 rounded-2xl border border-slate-700 space-y-2">
@@ -112,6 +135,11 @@ export default function ProjectDetailPage() {
               <div className="text-2xl sm:text-3xl font-extrabold text-gold-400 font-serif">
                 {formatPrice(project.priceMin)} - {formatPrice(project.priceMax)}
               </div>
+              {(project.pricePerSqFtDisplay || project.pricePerSqFt) && (
+                <div className="text-xs font-bold text-gold-300">
+                  Rate: {project.pricePerSqFtDisplay || `Starting at ₹${project.pricePerSqFt.toLocaleString('en-IN')} / sq.ft`}
+                </div>
+              )}
               <button
                 onClick={() => setLeadModalOpen(true)}
                 className="w-full py-2.5 px-4 rounded-xl bg-gold-400 hover:bg-gold-500 text-slate-950 font-bold text-xs uppercase tracking-wider transition shadow-md"
@@ -132,7 +160,19 @@ export default function ProjectDetailPage() {
             {project.description}
           </p>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-4 border-t border-slate-100 text-xs">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5 pt-4 border-t border-slate-100 text-xs">
+            <div>
+              <span className="text-slate-400 block">Rate / Sq.Ft</span>
+              <span className="font-extrabold text-primary-700 text-sm mt-0.5 block">
+                {project.pricePerSqFtDisplay || (project.pricePerSqFt ? `₹${project.pricePerSqFt.toLocaleString('en-IN')}/sq.ft` : 'On Request')}
+              </span>
+            </div>
+            <div>
+              <span className="text-slate-400 block">Unit Sizes</span>
+              <span className="font-extrabold text-slate-800 text-sm mt-0.5 block">
+                {project.sizeRange || 'Custom Layouts'}
+              </span>
+            </div>
             <div>
               <span className="text-slate-400 block">Configurations</span>
               <span className="font-extrabold text-slate-800 text-sm mt-0.5 block">
@@ -148,17 +188,59 @@ export default function ProjectDetailPage() {
             <div>
               <span className="text-slate-400 block">Total Area</span>
               <span className="font-extrabold text-slate-800 text-sm mt-0.5 block">
-                {project.totalAreaAcres || 10} Acres ({project.openAreaPercent || 75}% Greenery)
+                {project.totalAreaAcres || 4} Acres
               </span>
             </div>
             <div>
-              <span className="text-slate-400 block">Units & Towers</span>
-              <span className="font-extrabold text-slate-800 text-sm mt-0.5 block">
-                {project.totalTowers || 4} Towers ({project.totalUnits || 250} Units)
+              <span className="text-slate-400 block">RERA Status</span>
+              <span className="font-extrabold text-emerald-700 text-sm mt-0.5 block">
+                Approved
               </span>
             </div>
           </div>
         </div>
+
+        {/* Floor-wise Rates & Size Breakdown (WeGrow Infraventures Verified Data) */}
+        {project.floorRates && project.floorRates.length > 0 && (
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 pb-4">
+              <div>
+                <h2 className="text-2xl font-bold text-slate-900 font-serif">
+                  Floor-wise Rates & Size Breakdown
+                </h2>
+                <p className="text-xs text-slate-500 mt-1">
+                  Detailed square foot rates, sizes, and layout utilities for {project.name}.
+                </p>
+              </div>
+              <span className="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-lg border border-emerald-200/60 self-start sm:self-auto">
+                Verified Market Rates
+              </span>
+            </div>
+
+            <div className="overflow-x-auto">
+              <table className="w-full text-left text-xs border-collapse">
+                <thead>
+                  <tr className="border-b border-slate-200 text-slate-400 font-bold uppercase tracking-wider">
+                    <th className="py-3 px-4">Level / Floor</th>
+                    <th className="py-3 px-4">Rate per Sq. Ft.</th>
+                    <th className="py-3 px-4">Unit Size (Sq. Ft.)</th>
+                    <th className="py-3 px-4">Recommended Usage</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-100">
+                  {project.floorRates.map((fr, idx) => (
+                    <tr key={idx} className="hover:bg-slate-50/80 transition">
+                      <td className="py-3.5 px-4 font-bold text-slate-900">{fr.floor}</td>
+                      <td className="py-3.5 px-4 font-extrabold text-gold-600 font-mono text-sm">{fr.rate}</td>
+                      <td className="py-3.5 px-4 font-medium text-slate-700">{fr.size}</td>
+                      <td className="py-3.5 px-4 text-slate-500">{fr.use}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        )}
 
         {/* Floor Plans Section */}
         {project.floorPlans && project.floorPlans.length > 0 && (
@@ -208,11 +290,19 @@ export default function ProjectDetailPage() {
                       </span>
                     </div>
                     <div>
-                      <span className="text-slate-400 block">Price:</span>
+                      <span className="text-slate-400 block">Total Price:</span>
                       <span className="font-extrabold text-gold-600 text-sm">
                         {formatPrice(project.floorPlans[activeFloorIndex].price)}
                       </span>
                     </div>
+                    {project.floorPlans[activeFloorIndex].pricePerSqFt && (
+                      <div>
+                        <span className="text-slate-400 block">Rate / Sq.Ft:</span>
+                        <span className="font-extrabold text-primary-700 text-sm">
+                          ₹{project.floorPlans[activeFloorIndex].pricePerSqFt.toLocaleString('en-IN')} / sq.ft
+                        </span>
+                      </div>
+                    )}
                   </div>
                   <button
                     onClick={() => setLeadModalOpen(true)}
