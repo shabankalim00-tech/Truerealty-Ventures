@@ -109,7 +109,7 @@ export default function HomePage() {
         {prefersReducedMotion || videoFailed ? (
           <img
             src="/videos/hero-poster.jpg"
-            alt="True Realty Venture Luxury Real Estate & Premium Villas"
+            alt="True Realty Venture - Dwarka Expressway & Gurugram Luxury Real Estate"
             className="absolute inset-0 z-0 h-full w-full object-cover object-center"
           />
         ) : (
@@ -127,8 +127,8 @@ export default function HomePage() {
             }}
             className="absolute inset-0 z-0 h-full w-full object-cover object-center"
           >
-            <source src="/videos/hero-background.mp4" type="video/mp4" />
             <source src="/videos/hero-background-720p.mp4" type="video/mp4" />
+            <source src="/videos/hero-background.mp4" type="video/mp4" />
           </video>
         )}
 
