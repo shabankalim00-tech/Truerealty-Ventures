@@ -166,15 +166,15 @@ export default function PropertyDetailPage() {
           </div>
 
           <div className="flex flex-col sm:items-end">
-            <span className="text-xs font-semibold text-slate-400">Total Price</span>
+            <span className="text-xs font-semibold text-slate-400">
+              {property.transactionType === 'Rent' ? 'Rent Starts from' : 'Investment Starts from'}
+            </span>
             <div className="text-3xl sm:text-4xl font-black text-slate-900 font-serif">
               {formatPrice(property.price, property.transactionType)}
             </div>
-            {property.pricePerSqFt > 0 && property.transactionType !== 'Rent' && (
-              <span className="text-xs font-bold text-primary-700 mt-0.5">
-                ₹{property.pricePerSqFt.toLocaleString('en-IN')} / sq.ft
-              </span>
-            )}
+            <span className="text-[11px] text-amber-600 font-medium italic mt-1">
+              ** Prices and availability are subject to change.
+            </span>
           </div>
         </div>
 
@@ -514,7 +514,9 @@ export default function PropertyDetailPage() {
       {/* Sticky Bottom Enquiry CTA for Mobile (Requirement #11) */}
       <div className="fixed bottom-0 inset-x-0 bg-white border-t border-slate-200 p-3 flex sm:hidden items-center justify-between z-40 shadow-2xl">
         <div>
-          <span className="text-[10px] text-slate-400 block">Total Price</span>
+          <span className="text-[10px] text-slate-400 block">
+            {property.transactionType === 'Rent' ? 'Rent Starts from' : 'Investment Starts from'}
+          </span>
           <span className="text-base font-extrabold text-slate-900 font-serif">
             {formatPrice(property.price, property.transactionType)}
           </span>

@@ -131,18 +131,29 @@ export default function ProjectDetailPage() {
             </div>
 
             <div className="bg-slate-900/80 backdrop-blur-md p-5 rounded-2xl border border-slate-700 space-y-2">
-              <span className="text-xs text-slate-400 block font-medium">Price Range</span>
+              <span className="text-xs text-slate-400 block font-medium">Investment Starts from</span>
               <div className="text-2xl sm:text-3xl font-extrabold text-gold-400 font-serif">
-                {formatPrice(project.priceMin)} - {formatPrice(project.priceMax)}
+                {project.priceMin && project.priceMin > 0 ? (
+                  project.priceMax && project.priceMax > project.priceMin ? (
+                    `${formatPrice(project.priceMin)} - ${formatPrice(project.priceMax)}`
+                  ) : (
+                    `${formatPrice(project.priceMin)} onwards`
+                  )
+                ) : (
+                  project.customPriceDisplay || 'Price on Request'
+                )}
               </div>
-              {(project.pricePerSqFtDisplay || project.pricePerSqFt) && (
-                <div className="text-xs font-bold text-gold-300">
-                  Rate: {project.pricePerSqFtDisplay || `Starting at ₹${project.pricePerSqFt.toLocaleString('en-IN')} / sq.ft`}
+              {project.returnsInfo ? (
+                <div className="text-xs font-bold text-emerald-400 bg-emerald-950/60 px-2.5 py-1 rounded-md border border-emerald-500/30">
+                  {project.returnsInfo}
                 </div>
-              )}
+              ) : null}
+              <div className="text-[11px] font-medium text-amber-300 italic">
+                ** Prices and availability are subject to change.
+              </div>
               <button
                 onClick={() => setLeadModalOpen(true)}
-                className="w-full py-2.5 px-4 rounded-xl bg-gold-400 hover:bg-gold-500 text-slate-950 font-bold text-xs uppercase tracking-wider transition shadow-md"
+                className="w-full py-2.5 px-4 rounded-xl bg-gold-400 hover:bg-gold-500 text-slate-950 font-bold text-xs uppercase tracking-wider transition shadow-md mt-2"
               >
                 Download Official Brochure
               </button>
@@ -162,9 +173,9 @@ export default function ProjectDetailPage() {
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5 pt-4 border-t border-slate-100 text-xs">
             <div>
-              <span className="text-slate-400 block">Rate / Sq.Ft</span>
+              <span className="text-slate-400 block">Investment Type</span>
               <span className="font-extrabold text-primary-700 text-sm mt-0.5 block">
-                {project.pricePerSqFtDisplay || (project.pricePerSqFt ? `₹${project.pricePerSqFt.toLocaleString('en-IN')}/sq.ft` : 'On Request')}
+                {project.projectType || 'Commercial'}
               </span>
             </div>
             <div>
@@ -290,19 +301,17 @@ export default function ProjectDetailPage() {
                       </span>
                     </div>
                     <div>
-                      <span className="text-slate-400 block">Total Price:</span>
+                      <span className="text-slate-400 block">Pricing:</span>
                       <span className="font-extrabold text-gold-600 text-sm">
                         {formatPrice(project.floorPlans[activeFloorIndex].price)}
                       </span>
                     </div>
-                    {project.floorPlans[activeFloorIndex].pricePerSqFt && (
-                      <div>
-                        <span className="text-slate-400 block">Rate / Sq.Ft:</span>
-                        <span className="font-extrabold text-primary-700 text-sm">
-                          ₹{project.floorPlans[activeFloorIndex].pricePerSqFt.toLocaleString('en-IN')} / sq.ft
-                        </span>
-                      </div>
-                    )}
+                    <div>
+                      <span className="text-slate-400 block">Status:</span>
+                      <span className="font-extrabold text-emerald-600 text-sm">
+                        Available on Request
+                      </span>
+                    </div>
                   </div>
                   <button
                     onClick={() => setLeadModalOpen(true)}

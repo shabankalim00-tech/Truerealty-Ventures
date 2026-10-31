@@ -126,17 +126,19 @@ export default function PropertyCard({ property, onEnquireClick }) {
           <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/70 via-slate-950/20 to-transparent p-3 pt-5 flex justify-between items-end">
             <div>
               <span className="text-[11px] font-medium text-slate-300">
-                {property.transactionType === 'Rent' ? 'Rent Price' : 'Total Price'}
+                {property.transactionType === 'Rent' ? 'Rent Starts from' : 'Investment Starts from'}
               </span>
               <div className="text-xl font-extrabold text-white font-serif">
                 {formatPrice(property.price, property.transactionType)}
               </div>
             </div>
-            {property.pricePerSqFt > 0 && property.transactionType !== 'Rent' && (
-              <span className="text-[11px] font-semibold text-gold-400 bg-slate-900/60 px-2 py-0.5 rounded">
-                ₹{property.pricePerSqFt.toLocaleString('en-IN')}/sq.ft
-              </span>
-            )}
+            <span className={`text-[10px] font-bold tracking-wide uppercase px-2 py-0.5 rounded backdrop-blur-sm border shadow-sm ${
+              property.transactionType === 'Rent' 
+                ? 'bg-sky-900/80 text-sky-200 border-sky-400/30' 
+                : 'bg-emerald-900/80 text-emerald-200 border-emerald-400/30'
+            }`}>
+              {property.transactionType === 'Rent' ? 'For Rent' : 'Available to Buy'}
+            </span>
           </div>
         </div>
 
@@ -187,6 +189,12 @@ export default function PropertyCard({ property, onEnquireClick }) {
               <Maximize2 className="w-3.5 h-3.5 text-primary-600 shrink-0" />
               <span className="font-semibold truncate">{formatArea(property.area)}</span>
             </div>
+          </div>
+          {/* Disclaimer */}
+          <div className="mt-2.5 px-0.5">
+            <span className="text-[10px] text-amber-700/90 font-medium italic block">
+              ** Prices and availability are subject to change.
+            </span>
           </div>
         </div>
       </div>

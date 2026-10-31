@@ -1,5 +1,5 @@
 export function formatPrice(price, transactionType = 'Buy') {
-  if (price === undefined || price === null || isNaN(price)) return 'Price on Request';
+  if (price === undefined || price === null || isNaN(price) || price === 0 || price === '0') return 'Price on Request';
 
   if (transactionType === 'Rent' || transactionType === 'rent') {
     return `₹ ${Number(price).toLocaleString('en-IN')} / mo`;
