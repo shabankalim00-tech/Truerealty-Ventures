@@ -697,9 +697,9 @@
   },
   {
     "_id": "prop-sg-city2-37d-buy-2bhk",
-    "title": "Signature Global City-II 37D - 2 BHK Luxury Low-Rise Floor G+4",
+    "title": "Signature Global City 37D Phase-II - 2 BHK Luxury Low-Rise Floor G+4",
     "slug": "signature-global-city-ii-37d-2bhk-low-rise-floor-sector-37d",
-    "description": "Signature Global City-II 37D Sector 37D Gurugram. 2 BHK Low-Rise G+4 independent floor at 1.25 Cr onwards. Upgraded architectural layout on Dwarka Expressway with private terrace and basement rights. Available to Buy & Rent.",
+    "description": "Signature Global City 37D Phase-II Sector 37D Gurugram. 2 BHK Low-Rise G+4 independent floor at 1.25 Cr onwards. Designed by Hafeez Contractor on Dwarka Expressway with private terrace rights and basement office space. Available to Buy & Rent.",
     "propertyType": "Builder Floor",
     "transactionType": "Buy",
     "price": 12500000,
@@ -713,15 +713,15 @@
     "furnishing": "Semi-Furnished",
     "facing": "East",
     "possession": "Ready to Move",
-    "reraNumber": "RC/REP/HARERA/GGM/587/319/2022/62",
+    "reraNumber": "RC/REP/HARERA/GGM/622/354/2022/97",
     "address": "Sector 37D, Dwarka Expressway Corridor, Gurugram, Haryana 122001",
     "featured": true,
     "verified": true,
     "isDemo": false,
     "status": "PUBLISHED",
     "images": [
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
+      "/listings/sg-city37d-phase2/image_2.jpg",
+      "/listings/sg-city37d-phase2/image_5.jpg"
     ],
     "amenities": [
       "Low-Rise G+4 Phase II Luxury",
@@ -741,9 +741,9 @@
   },
   {
     "_id": "prop-sg-city2-37d-buy-3bhk",
-    "title": "Signature Global City-II 37D - 3 BHK Luxury Low-Rise Floor G+4",
+    "title": "Signature Global City 37D Phase-II - 3 BHK Luxury Low-Rise Floor G+4",
     "slug": "signature-global-city-ii-37d-3bhk-low-rise-floor-sector-37d",
-    "description": "Signature Global City-II 37D Sector 37D Gurugram. 3 BHK Low-Rise G+4 independent floor at 1.60 Cr onwards. Premium corner layout, private terrace rights, and dedicated basement office space. Available to Buy & Rent.",
+    "description": "Signature Global City 37D Phase-II Sector 37D Gurugram. 3 BHK Low-Rise G+4 independent floor at 1.60 Cr onwards. Hafeez Contractor architecture, private terrace rights, and dedicated basement office space. Available to Buy & Rent.",
     "propertyType": "Builder Floor",
     "transactionType": "Buy",
     "price": 16000000,
@@ -757,15 +757,15 @@
     "furnishing": "Semi-Furnished",
     "facing": "North-East",
     "possession": "Ready to Move",
-    "reraNumber": "RC/REP/HARERA/GGM/587/319/2022/62",
+    "reraNumber": "RC/REP/HARERA/GGM/622/354/2022/97",
     "address": "Sector 37D, Dwarka Expressway Corridor, Gurugram, Haryana 122001",
     "featured": true,
     "verified": true,
     "isDemo": false,
     "status": "PUBLISHED",
     "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80"
+      "/listings/sg-city37d-phase2/image_5.jpg",
+      "/listings/sg-city37d-phase2/image_15.jpg"
     ],
     "amenities": [
       "Low-Rise G+4 Phase II Luxury",
@@ -784,9 +784,9 @@
   },
   {
     "_id": "prop-sg-city2-37d-rent-2bhk",
-    "title": "Signature Global City-II 37D - 2 BHK Low-Rise Rental Floor",
+    "title": "Signature Global City 37D Phase-II - 2 BHK Low-Rise Rental Floor",
     "slug": "signature-global-city-ii-37d-2bhk-rental-floor-sector-37d",
-    "description": "Signature Global City-II 37D Sector 37D Gurugram. 2 BHK rental luxury floor at 30,000/month on Dwarka Expressway. Gated community with elevator, clubhouse, and modern interiors.",
+    "description": "Signature Global City 37D Phase-II Sector 37D Gurugram. 2 BHK rental luxury floor at 30,000/month on Dwarka Expressway. Gated community with elevator, clubhouse, and modern interiors.",
     "propertyType": "Builder Floor",
     "transactionType": "Rent",
     "price": 30000,
@@ -800,14 +800,14 @@
     "furnishing": "Semi-Furnished",
     "facing": "East",
     "possession": "Ready to Move",
-    "reraNumber": "RC/REP/HARERA/GGM/587/319/2022/62",
+    "reraNumber": "RC/REP/HARERA/GGM/622/354/2022/97",
     "address": "Sector 37D, Dwarka Expressway Corridor, Gurugram, Haryana 122001",
     "featured": false,
     "verified": true,
     "isDemo": false,
     "status": "PUBLISHED",
     "images": [
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80"
+      "/listings/sg-city37d-phase2/image_2.jpg"
     ],
     "amenities": [
       "Dwarka Expressway Access",
@@ -994,14 +994,14 @@
   },
   {
     "_id": "prop-rof-antalya-buy-2bhk",
-    "title": "ROF Antalya Sector 93 - 2 BHK High-Rise Affordable Flat",
-    "slug": "rof-antalya-sector-93-2bhk-high-rise-flat",
-    "description": "ROF Antalya Sector 93 Gurugram. 2 BHK ready-to-move high-rise affordable flat at 75 Lacs onwards. Modern gated society, podium central green, commercial shops, and smooth connectivity to Pataudi Road. Available to Buy & Rent.",
+    "title": "ROF Atulyas Sector 93 - 2 BHK High-Rise Nature Residences",
+    "slug": "rof-atulyas-sector-93-2bhk-flat",
+    "description": "ROF Atulyas Sector 93 Gurugram. 2 BHK ready-to-move high-rise affordable flat at 75 Lacs onwards. IGBC Green Gold Rated society, 60-meter road frontage, commercial shopping arcade, and smooth connectivity to IMT Manesar and CPR. Available to Buy & Rent.",
     "propertyType": "Apartment",
     "transactionType": "Buy",
     "price": 7500000,
-    "area": 645,
-    "carpetArea": 590,
+    "area": 674,
+    "carpetArea": 503,
     "bedrooms": 2,
     "bathrooms": 2,
     "balconies": 2,
@@ -1010,18 +1010,19 @@
     "furnishing": "Semi-Furnished",
     "facing": "North-East",
     "possession": "Ready to Move",
-    "reraNumber": "RC/REP/HARERA/GGM/512/244/2021/80",
-    "address": "Sector 93, New Gurgaon, Gurugram, Haryana 122505",
+    "reraNumber": "IGBC Reg: GAH201067 | HARERA Approved",
+    "address": "Sector 93, 60-Meter Wide Road, New Gurgaon, Gurugram, Haryana 122505",
     "featured": true,
     "verified": true,
     "isDemo": false,
     "status": "PUBLISHED",
     "images": [
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80"
+      "/listings/rof-atulyas/image_3.jpg",
+      "/listings/rof-atulyas/image_18.jpg"
     ],
     "amenities": [
       "Ready to Move High-Rise Flat",
+      "IGBC Green Gold Rated Community",
       "Podium Central Green Park",
       "Commercial Shopping Arcade",
       "Available to Buy & Rent",
@@ -1038,14 +1039,14 @@
   },
   {
     "_id": "prop-rof-antalya-buy-3bhk",
-    "title": "ROF Antalya Sector 93 - 3 BHK High-Rise Affordable Flat",
-    "slug": "rof-antalya-sector-93-3bhk-high-rise-flat",
-    "description": "ROF Antalya Sector 93 Gurugram. 3 BHK ready-to-move high-rise affordable flat at 85 Lacs onwards. Spacious three-bedroom layout with open balcony views and quick highway connectivity. Available to Buy & Rent.",
+    "title": "ROF Atulyas Sector 93 - 3 BHK High-Rise Nature Residences",
+    "slug": "rof-atulyas-sector-93-3bhk-flat",
+    "description": "ROF Atulyas Sector 93 Gurugram. 3 BHK ready-to-move high-rise affordable flat at 85 Lacs onwards. Spacious three-bedroom layout with open balcony views, modern wave architecture, and quick highway connectivity. Available to Buy & Rent.",
     "propertyType": "Apartment",
     "transactionType": "Buy",
     "price": 8500000,
-    "area": 750,
-    "carpetArea": 690,
+    "area": 792,
+    "carpetArea": 643,
     "bedrooms": 3,
     "bathrooms": 2,
     "balconies": 2,
@@ -1054,15 +1055,15 @@
     "furnishing": "Semi-Furnished",
     "facing": "East",
     "possession": "Ready to Move",
-    "reraNumber": "RC/REP/HARERA/GGM/512/244/2021/80",
-    "address": "Sector 93, New Gurgaon, Gurugram, Haryana 122505",
+    "reraNumber": "IGBC Reg: GAH201067 | HARERA Approved",
+    "address": "Sector 93, 60-Meter Wide Road, New Gurgaon, Gurugram, Haryana 122505",
     "featured": true,
     "verified": true,
     "isDemo": false,
     "status": "PUBLISHED",
     "images": [
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80"
+      "/listings/rof-atulyas/image_18.jpg",
+      "/listings/rof-atulyas/image_10.jpg"
     ],
     "amenities": [
       "Ready to Move High-Rise Flat",
@@ -1081,14 +1082,14 @@
   },
   {
     "_id": "prop-rof-antalya-rent-2bhk",
-    "title": "ROF Antalya Sector 93 - 2 BHK High-Rise Rental Flat",
-    "slug": "rof-antalya-sector-93-2bhk-rental-flat",
-    "description": "ROF Antalya Sector 93 Gurugram. Ready to move 2 BHK high-rise rental flat at 18,000/month. Clean modern apartment with power backup and security in New Gurgaon.",
+    "title": "ROF Atulyas Sector 93 - 2 BHK High-Rise Rental Flat",
+    "slug": "rof-atulyas-sector-93-2bhk-rental-flat",
+    "description": "ROF Atulyas Sector 93 Gurugram. Ready to move 2 BHK high-rise rental flat at 18,000/month. Clean modern apartment with power backup, wave balconies, and security in New Gurgaon.",
     "propertyType": "Apartment",
     "transactionType": "Rent",
     "price": 18000,
-    "area": 645,
-    "carpetArea": 590,
+    "area": 674,
+    "carpetArea": 503,
     "bedrooms": 2,
     "bathrooms": 2,
     "balconies": 2,
@@ -1097,14 +1098,14 @@
     "furnishing": "Semi-Furnished",
     "facing": "North-East",
     "possession": "Ready to Move",
-    "reraNumber": "RC/REP/HARERA/GGM/512/244/2021/80",
-    "address": "Sector 93, New Gurgaon, Gurugram, Haryana 122505",
+    "reraNumber": "IGBC Reg: GAH201067 | HARERA Approved",
+    "address": "Sector 93, 60-Meter Wide Road, New Gurgaon, Gurugram, Haryana 122505",
     "featured": false,
     "verified": true,
     "isDemo": false,
     "status": "PUBLISHED",
     "images": [
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80"
+      "/listings/rof-atulyas/image_3.jpg"
     ],
     "amenities": [
       "Ready to Move High-Rise Flat",
