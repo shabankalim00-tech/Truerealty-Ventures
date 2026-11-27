@@ -273,6 +273,31 @@ export const LOCALITIES = [
 
 export const DEVELOPERS = [
   {
+    _id: 'dev-dlf',
+    name: 'DLF India',
+    slug: 'dlf-india',
+    description: 'DLF is India’s largest and most iconic luxury real estate developer with over 75 years of heritage, creator of DLF CyberCity, Golf Course Road, and landmark residences like The Camellias.',
+    establishedYear: 1946,
+    locations: ['Gurgaon', 'Delhi NCR', 'Chandigarh'],
+    rating: 5.0,
+    totalDeliveredSqFt: '100M+ Sq.Ft.',
+    logo: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=400&q=80',
+    featured: true
+  },
+  {
+    _id: 'dev-elan',
+    name: 'Elan Group',
+    slug: 'elan-group',
+    description: 'Elan Group is one of the most prestigious luxury and commercial real estate developers in Gurugram, famed for The Presidential, The Emperor, and iconic high-street commercial destinations.',
+    establishedYear: 2013,
+    locations: ['Gurgaon', 'Delhi NCR'],
+    rating: 4.8,
+    totalDeliveredSqFt: '20M+ Sq.Ft.',
+    logo: 'https://images.unsplash.com/photo-1541888946425-d0fbb186c5f7?auto=format&fit=crop&w=400&q=80',
+    featured: true
+  },
+
+  {
     _id: 'dev-1',
     name: 'M3M India',
     slug: 'm3m-india',
@@ -388,7 +413,7 @@ export const PROJECTS = [
     _id: 'proj-1',
     name: 'M3M Route 65',
     slug: 'm3m-route-65',
-    tagline: 'Investment starts 85 Lacs onwards | Pre-leased shops with 6% returns (Ready To Move)',
+    tagline: 'Investment starts ₹75 Lacs onwards | Pre-leased shops with 6% returns (Ready To Move)',
     description: 'M3M Route 65 is spread across 4 prime acres in Sector 65, Golf Course Extension Road. Features 3-level high-street retail, pre-leased anchor stores, dedicated F&B dining plaza, hypermarket on lower ground floor, and double-height showrooms with pedestrian-friendly boulevards. Offering verified pre-leased retail shops yielding 6% assured returns.',
     projectType: 'Commercial',
     developer: 'dev-1',
@@ -399,17 +424,14 @@ export const PROJECTS = [
     possession: 'Ready to Move',
     possessionDate: '2025-10-31',
     status: 'READY_TO_MOVE',
-    priceMin: 8500000,
+    priceMin: 7500000,
     priceMax: 35000000,
     returnsInfo: '6% Assured Returns (Pre-leased)',
     sizeRange: '250 - 1,750 sq.ft.',
     configurations: ['Pre-Leased Retail Shops (250-750 sq.ft)', 'Anchor Showrooms (1,000-1,750 sq.ft)', 'Food Court Units (300-500 sq.ft)', 'Hypermarket Spaces'],
     totalAreaAcres: 4.0,
     featured: true,
-    images: [
-      '/listings/m3m-commercial/image_1.jpg',
-      '/listings/m3m-broadway/image_1.jpg',
-    ],
+    images: ['/listings/m3m-route65/image_1.webp', 'https://api.wegrowinfraventures.com/public/images/property/upload-1768549043036.webp'],
     floorRates: [
       { floor: 'Ground & Upper Ground Floor', rate: 'Investment starts ₹1.85 Cr', size: '250 - 1,750 sq.ft', use: 'Pre-Leased High-Street Retail & Anchor Brands' },
       { floor: 'Lower Ground Floor', rate: 'Investment starts ₹85 Lacs', size: '400 - 1,200 sq.ft', use: 'Pre-Leased Hypermarket & Retail' },
@@ -452,7 +474,7 @@ export const PROJECTS = [
     _id: 'proj-3',
     name: 'M3M Jewel',
     slug: 'm3m-jewel',
-    tagline: 'Price on Request | Pre-leased shops with 6% returns (Ready To Move)',
+    tagline: 'Investment starts ₹2.5 Cr onwards | Ultra-Luxury High-Street Retail & Anchor Stores',
     description: 'M3M Jewel is Gurugram first hybrid luxury retail destination on MG Road, Sector 25. Positioned 2 minutes from Cyber City and 5 minutes from Golf Course Road. Features 3 levels of luxury retail, pre-leased boutique shops with 6% assured returns, double-height showrooms, expansive glass frontage, 5-screen multiplex, and grade-A corporate offices.',
     projectType: 'Commercial',
     developer: 'dev-1',
@@ -463,18 +485,15 @@ export const PROJECTS = [
     possession: 'Ready to Move',
     possessionDate: '2025-12-31',
     status: 'READY_TO_MOVE',
-    priceMin: 0,
-    priceMax: 0,
+    priceMin: 25000000,
+    priceMax: 75000000,
     customPriceDisplay: 'Price on Request',
     returnsInfo: '6% Assured Returns (Pre-leased)',
     sizeRange: '300 - 2,500 sq.ft.',
     configurations: ['Luxury Retail Showrooms (300-1,200 sq.ft)', 'Flagship Anchor Stores (1,500-2,500 sq.ft)', 'Corporate Office Suites (600-1,800 sq.ft)', 'Multiplex & F&B Units'],
     totalAreaAcres: 3.5,
     featured: true,
-    images: [
-      '/listings/m3m-broadway/image_1.jpg',
-      '/listings/m3m-commercial/image_1.jpg',
-    ],
+    images: ['/listings/m3m-jewel/image_1.webp', '/listings/m3m-jewel/image_crest.webp', 'https://api.wegrowinfraventures.com/public/images/property/upload-1768819366165.webp'],
     floorRates: [
       { floor: 'Ground Floor Retail', rate: 'Price on Request', size: '400 - 2,500 sq.ft', use: 'Double-Height Flagship Showrooms' },
       { floor: 'First Floor', rate: 'Price on Request', size: '350 - 1,500 sq.ft', use: 'Pre-Leased High-End Fashion & Jewelry' },
@@ -507,7 +526,7 @@ export const PROJECTS = [
     _id: 'proj-4',
     name: 'SPJ Vedatam',
     slug: 'spj-vedatam',
-    tagline: 'Investment starts 50 Lacs onwards (Under Construction)',
+    tagline: 'Investment starts ₹70 Lacs onwards (Under Construction)',
     description: 'SPJ Vedatam is a premier mixed-use commercial and lifestyle landmark on Old Delhi-Gurgaon Road, Sector 14, Gurugram. Designed by acclaimed ACPL Architects across 4.15 acres, Vedatam offers double-height high-street retail, multiplex, commercial suites, and a vibrant dining plaza in the heart of Gurgaon.',
     projectType: 'Commercial',
     developer: 'dev-spj',
@@ -518,20 +537,14 @@ export const PROJECTS = [
     possession: 'In 2027 (Under Construction)',
     possessionDate: '2027-12-31',
     status: 'UNDER_CONSTRUCTION',
-    priceMin: 5000000,
+    priceMin: 7000000,
     priceMax: 25000000,
     returnsInfo: 'Designed by ACPL Architects',
     sizeRange: '180 - 1,500 sq.ft.',
     configurations: ['High-Street Retail Shops (180-500 sq.ft)', 'Flagship Double-Height Showrooms (600-1,500 sq.ft)', 'Food Court & Dining Spaces (300-600 sq.ft)', 'Commercial Suites'],
     totalAreaAcres: 4.15,
     featured: true,
-    images: [
-      '/listings/spj-vedatam/image_1.jpg',
-      '/listings/spj-vedatam/image_2.jpg',
-      '/listings/spj-vedatam/image_3.jpg',
-      '/listings/spj-vedatam/image_4.jpg',
-      '/listings/spj-vedatam/image_5.jpg',
-    ],
+    images: ['/listings/spj-vedatam/wegrow_main.webp', '/listings/spj-vedatam/image_1.jpg', '/listings/spj-vedatam/image_2.jpg'],
     floorRates: [
       { floor: 'Ground Floor (Retail / Anchor)', rate: 'Investment starts ₹1.2 Cr', size: '250 - 1,500 sq.ft', use: 'High-Visibility Flagship Retail' },
       { floor: 'Lower Ground Floor', rate: 'Investment starts ₹50 Lacs', size: '180 - 800 sq.ft', use: 'Boutique Retail & Lockable Shops' },
@@ -573,7 +586,7 @@ export const PROJECTS = [
     _id: 'proj-paragon57',
     name: 'M3M Paragon 57',
     slug: 'm3m-paragon-57',
-    tagline: 'Price on Request | Ultra-Luxury High-Street Retail & Open-Air Boulevards',
+    tagline: 'Investment starts ₹80 Lacs onwards | Ultra-Luxury High-Street Retail & Open-Air Boulevards',
     description: 'M3M Paragon 57 in Sector 57, Gurugram, is a state-of-the-art commercial marvel crafted on a prime corner plot along Golf Course Extension Road corridor. Boasting an open-air pedestrian high-street experience, curated boutique retail, rooftop fine dining, entertainment multiplex, and massive dual road visibility.',
     projectType: 'Commercial',
     developer: 'dev-1',
@@ -584,18 +597,15 @@ export const PROJECTS = [
     possession: 'In 2026',
     possessionDate: '2026-12-31',
     status: 'UNDER_CONSTRUCTION',
-    priceMin: 0,
-    priceMax: 0,
+    priceMin: 8000000,
+    priceMax: 35000000,
     customPriceDisplay: 'Price on Request',
     returnsInfo: 'High-Street Retail & Dining Boulevard',
     sizeRange: '250 - 2,000 sq.ft.',
     configurations: ['High-Street Retail Shops (250-800 sq.ft)', 'Anchor Stores & Showrooms (1,000-2,000 sq.ft)', 'Gourmet Dining & Multiplex Units'],
     totalAreaAcres: 3.8,
     featured: true,
-    images: [
-      '/listings/m3m-commercial/image_1.jpg',
-      '/listings/m3m-broadway/image_1.jpg',
-    ],
+    images: ['/listings/m3m-paragon57/image_1.webp', 'https://api.wegrowinfraventures.com/public/images/property/upload-1752573799412.webp'],
     amenities: [
       'Open-Air Retail Courtyard',
       'Double-Height High-Street Shops',
@@ -612,7 +622,7 @@ export const PROJECTS = [
     _id: 'proj-antalya79',
     name: 'M3M Antalya Hills',
     slug: 'm3m-antalya-hills',
-    tagline: 'Ready to Move & Under Construction both options | Flexible payment plans',
+    tagline: 'Starts from ₹1.29 Cr onwards | Luxury Nature Living in Sector 79',
     description: 'M3M Antalya Hills in Sector 79 Gurugram presents ultra-luxury low-rise residences nestled at the serene foothills of the Aravallis. Features private terrace gardens, dedicated basement home office spaces, biophilic landscaped walkways, and world-class resort club amenities with both ready to move and under construction configurations.',
     projectType: 'Residential',
     developer: 'dev-1',
@@ -623,17 +633,14 @@ export const PROJECTS = [
     possession: 'Ready to Move & Under Construction both options',
     possessionDate: '2025-12-31',
     status: 'UNDER_CONSTRUCTION',
-    priceMin: 12500000,
+    priceMin: 12900000,
     priceMax: 22000000,
     returnsInfo: 'Flexible Payment Plans',
     sizeRange: '1,138 - 1,660 sq.ft.',
     configurations: ['2.5 BHK Luxury Floors (1,138-1,280 sq.ft)', '3.5 BHK Luxury Floors + Private Terrace / Basement (1,534-1,660 sq.ft)'],
     totalAreaAcres: 25.0,
     featured: true,
-    images: [
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
-    ],
+    images: ['/listings/m3m-antalya79/image_1.webp', 'https://api.wegrowinfraventures.com/public/images/property/upload-1770109086339.webp'],
     amenities: [
       'Aravalli Foothills Panoramic Views',
       'Private Terrace & Basement Rights',
@@ -648,9 +655,9 @@ export const PROJECTS = [
   // 6. Smart World Manesar - Manesar Gurugram
   {
     _id: 'proj-sw-manesar',
-    name: 'Smart World Manesar',
+    name: 'Smartworld Nature\'s Court Manesar',
     slug: 'smart-world-manesar',
-    tagline: 'Under Construction with Flexible Payment Plans | Studio, 2BHK & 3BHK',
+    tagline: 'Starts from ₹1.28 Cr onwards | Premium Low-Rise Residences & Nature Greens',
     description: 'Smart World Manesar is a futuristic lifestyle development in the IMT Manesar growth corridor. Designed with Singapore-inspired architecture, smart automation, open landscaped parks, and contemporary Studio, 2BHK and 3BHK configurations with attractive builder payment schemes.',
     projectType: 'Residential',
     developer: 'dev-smartworld',
@@ -661,17 +668,14 @@ export const PROJECTS = [
     possession: 'Under Construction (Flexible Payment Plans)',
     possessionDate: '2027-06-30',
     status: 'UNDER_CONSTRUCTION',
-    priceMin: 4500000,
-    priceMax: 13500000,
+    priceMin: 12800000,
+    priceMax: 22000000,
     returnsInfo: 'Flexible Payment Plans',
     sizeRange: '450 - 1,650 sq.ft.',
     configurations: ['Studio Apartments (450-550 sq.ft)', '2 BHK Smart Residences (950-1,100 sq.ft)', '3 BHK Luxury Suites (1,350-1,650 sq.ft)'],
     totalAreaAcres: 18.0,
     featured: true,
-    images: [
-      'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80',
-    ],
+    images: ['/listings/smartworld-manesar/image_1.webp', 'https://api.wegrowinfraventures.com/public/images/property/upload-1768629775417.webp'],
     amenities: [
       'Modern High-Rise Smart Living',
       'Flexible Payment Plans',
@@ -687,7 +691,7 @@ export const PROJECTS = [
     _id: 'proj-forestia',
     name: 'M3M Forestia Manesar',
     slug: 'm3m-forestia-manesar',
-    tagline: 'Under Construction with Flexible Payment Plans | 2BHK & 3BHK Nature Residences',
+    tagline: 'Starts from ₹2.40 Cr onwards (East & West Wings) | Luxury Nature Residences',
     description: 'M3M Forestia in Manesar is a nature-inspired residential sanctuary built around tranquil forested groves, eco-trails, and green canopies. Offering contemporary 2BHK and 3BHK luxury apartments with flexible payment plans and seamless connectivity to the Delhi-Jaipur highway.',
     projectType: 'Residential',
     developer: 'dev-1',
@@ -698,17 +702,14 @@ export const PROJECTS = [
     possession: 'Under Construction (Flexible Payment Plans)',
     possessionDate: '2027-12-31',
     status: 'UNDER_CONSTRUCTION',
-    priceMin: 8500000,
-    priceMax: 14500000,
+    priceMin: 24000000,
+    priceMax: 38000000,
     returnsInfo: 'Flexible Payment Plans',
     sizeRange: '1,150 - 1,800 sq.ft.',
     configurations: ['2 BHK Nature Residences (1,150-1,300 sq.ft)', '3 BHK Forest-View Residences (1,550-1,800 sq.ft)'],
     totalAreaAcres: 14.5,
     featured: true,
-    images: [
-      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-    ],
+    images: ['/listings/m3m-forestia/image_1.webp', '/listings/m3m-forestia/image_east.webp', 'https://api.wegrowinfraventures.com/public/images/property/upload-1784791212432.webp'],
     amenities: [
       'Dense Forest Groves & Walking Trails',
       'Flexible Payment Plans',
@@ -742,10 +743,7 @@ export const PROJECTS = [
     configurations: ['2 BHK Low-Rise G+4 (955-1,096 sq.ft)', '3 BHK Low-Rise G+4 (1,205-1,450 sq.ft)'],
     totalAreaAcres: 11.97,
     featured: true,
-    images: [
-      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-    ],
+    images: ['/listings/signature-global/city_of_colours.webp', '/listings/signature-global/cloverdale.webp'],
     amenities: [
       'Low-Rise G+4 Independent Floors',
       'Dedicated Basement Office & Terrace Rights',
@@ -780,10 +778,7 @@ export const PROJECTS = [
     configurations: ['2 BHK Low-Rise G+4 (950-1,050 sq.ft)', '3 BHK Low-Rise G+4 (1,200-1,400 sq.ft)'],
     totalAreaAcres: 10.3,
     featured: true,
-    images: [
-      'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80',
-    ],
+    images: ['/listings/signature-global/daxin_vistas.webp'],
     amenities: [
       'Low-Rise G+4 Living Concept',
       'Private Terrace Space',
@@ -817,10 +812,7 @@ export const PROJECTS = [
     configurations: ['2 BHK Low-Rise G+4 (990-1,100 sq.ft)', '3 BHK Low-Rise G+4 (1,250-1,550 sq.ft)'],
     totalAreaAcres: 5.62,
     featured: true,
-    images: [
-      'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
-    ],
+    images: ['/listings/signature-global/sarvam_37d.webp', 'https://api.wegrowinfraventures.com/public/images/property/upload-1773826382342.webp'],
     amenities: [
       'Dwarka Expressway Prime Location',
       'Low-Rise G+4 Luxury Floors',
@@ -927,10 +919,7 @@ export const PROJECTS = [
     configurations: ['2 BHK High-Rise (585-645 sq.ft carpet)'],
     totalAreaAcres: 5.89,
     featured: true,
-    images: [
-      'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
-    ],
+    images: ['/listings/signature-global/twin_tower_dxp.webp'],
     amenities: [
       'Ready to Move High-Rise Community',
       'Dwarka Expressway Strategic Location',
@@ -964,10 +953,7 @@ export const PROJECTS = [
     configurations: ['2 BHK High-Rise (580-630 sq.ft carpet)'],
     totalAreaAcres: 6.2,
     featured: true,
-    images: [
-      'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1200&q=80',
-    ],
+    images: ['/listings/signature-global/titanium_spr.webp'],
     amenities: [
       'Ready to Move High-Rise Towers',
       'Dwarka Expressway Proximity',
@@ -1097,7 +1083,7 @@ export const PROJECTS = [
     _id: 'proj-5',
     name: 'M3M Capital Walk',
     slug: 'm3m-capital-walk',
-    tagline: 'Flagship Luxury High-Street & Global Brands Boulevard',
+    tagline: 'Investment starts ₹1.09 Cr onwards | Flagship Luxury High-Street Boulevard',
     description: 'M3M Capital Walk is an ultra-luxurious, grand commercial boulevard featuring world-class architecture, expansive double-height retail frontages, global brand flagships, and vibrant open-air landscaped terrace dining spaces in Sector 113, Dwarka Expressway, Gurugram.',
     projectType: 'Commercial',
     developer: 'dev-1',
@@ -1108,15 +1094,13 @@ export const PROJECTS = [
     possession: 'In 2026',
     possessionDate: '2026-12-31',
     status: 'UNDER_CONSTRUCTION',
-    priceMin: 6500000,
+    priceMin: 10900000,
     priceMax: 35000000,
     sizeRange: '300 - 3,200 sq.ft.',
     configurations: ['High-Street Retail (300-800 sq.ft)', 'Anchor Retail Stores (1,200-3,200 sq.ft)', 'Gourmet Dining Terraces (450-1,100 sq.ft)'],
     totalAreaAcres: 5.2,
     featured: true,
-    images: [
-      '/listings/m3m-commercial/image_1.jpg'
-    ],
+    images: ['/listings/m3m-capitalwalk/image_1.webp', 'https://api.wegrowinfraventures.com/public/images/property/upload-1784801271104.webp'],
     amenities: [
       'Double-Height Glass Façade',
       'Global Flagship Retail Brands',
@@ -1132,7 +1116,7 @@ export const PROJECTS = [
     _id: 'proj-6',
     name: 'M3M Broadway',
     slug: 'm3m-broadway',
-    tagline: 'Futuristic Architectural High-Street & Open Terraces Boulevard',
+    tagline: 'Investment starts ₹1.16 Cr onwards | Futuristic Architectural High-Street & Boulevards',
     description: 'M3M Broadway is an architectural triumph with curvilinear cantilevered terraces, illuminated crown lighting, boutique fashion retail stores, luxury jewelers, and rooftop alfresco cafes in Sector 71, Gurugram.',
     projectType: 'Commercial',
     developer: 'dev-1',
@@ -1143,15 +1127,13 @@ export const PROJECTS = [
     possession: 'Ready to Move / Delivered',
     possessionDate: '2025-06-30',
     status: 'READY_TO_MOVE',
-    priceMin: 5000000,
+    priceMin: 11600000,
     priceMax: 35000000,
     sizeRange: '150 - 2,500 sq.ft.',
     configurations: ['High-Street Retail Shops (150-600 sq.ft)', 'Terrace Restaurants & Cafes (400-1,200 sq.ft)', 'Anchor Showrooms (1,000-2,500 sq.ft)'],
     totalAreaAcres: 7.85,
     featured: true,
-    images: [
-      '/listings/m3m-broadway/image_1.jpg'
-    ],
+    images: ['/listings/m3m-broadway/wegrow_main.webp', '/listings/m3m-broadway/image_1.jpg'],
     amenities: [
       'Iconic Curvilinear Architectural Facade',
       'Cantilevered Open-Air Terrace Seating',
@@ -1202,7 +1184,7 @@ export const PROJECTS = [
     _id: 'proj-8',
     name: 'M3M Crown',
     slug: 'm3m-crown',
-    tagline: 'Regal Living Amidst 5.5 Acres of Lush Central Greens',
+    tagline: 'Starts from ₹2.99 Cr onwards | Regal Living Amidst 5.5 Acres of Lush Central Greens',
     description: 'M3M Crown is an ultra-luxury residential oasis situated in Sector 111, Dwarka Expressway, Gurugram. Featuring a majestic amphitheatre overlooking central lagoons, cascading water bodies, wooden footbridges, themed botanical gardens, and 75,000 sq.ft. of world-class club lifestyle.',
     projectType: 'Residential',
     developer: 'dev-1',
@@ -1213,15 +1195,13 @@ export const PROJECTS = [
     possession: 'In 2027',
     possessionDate: '2027-12-31',
     status: 'UNDER_CONSTRUCTION',
-    priceMin: 18500000,
+    priceMin: 29900000,
     priceMax: 45000000,
     sizeRange: '1,605 - 2,670 sq.ft.',
     configurations: ['3 BHK Luxury Residences (1,605-1,895 sq.ft)', '3.5 BHK + Study (2,050-2,170 sq.ft)', '4 BHK Grand Suites (2,248-2,670 sq.ft)'],
     totalAreaAcres: 16.0,
     featured: true,
-    images: [
-      '/listings/m3m-crown/image_1.jpg'
-    ],
+    images: ['/listings/m3m-crown/wegrow_main.webp', '/listings/m3m-crown/image_1.jpg'],
     amenities: [
       '5.5 Acres of Lush Central Greens & Lagoons',
       'Open-Air Stone Amphitheatre',
@@ -1237,7 +1217,7 @@ export const PROJECTS = [
     _id: 'proj-9',
     name: 'M3M Altitude',
     slug: 'm3m-altitude',
-    tagline: 'The Height of Ultra-Luxury Living at Sector 65',
+    tagline: 'Starts from ₹11.89 Cr onwards | The Height of Ultra-Luxury Living at Sector 65',
     description: 'M3M Altitude is an iconic 40+ storey sky-mansion residential tower in Sector 65, Golf Course Extension Road, Gurugram. Designed by Upton Hansen Associates (London), featuring sky lounges at 130 meters, cantilevered glass pools, and bespoke 4 BHK ultra-luxury residences.',
     projectType: 'Residential',
     developer: 'dev-1',
@@ -1248,15 +1228,13 @@ export const PROJECTS = [
     possession: 'In 2028',
     possessionDate: '2028-12-31',
     status: 'NEW_LAUNCH',
-    priceMin: 100000000,
+    priceMin: 118900000,
     priceMax: 180000000,
     sizeRange: '3,800 - 5,500 sq.ft.',
     configurations: ['4 BHK Sky Mansions (3,800-4,200 sq.ft)', '5 BHK Presidential Suites (5,500 sq.ft)'],
     totalAreaAcres: 4.0,
     featured: true,
-    images: [
-      '/listings/m3m-golfestate/image_1.jpg'
-    ],
+    images: ['/listings/m3m-altitude/image_1.webp', 'https://api.wegrowinfraventures.com/public/images/property/upload-1770119767447.webp'],
     amenities: [
       'Sky Lounge at 130m Height',
       'Cantilevered Heated Glass Pool',
@@ -1264,19 +1242,192 @@ export const PROJECTS = [
       'Panoramic Golf Course Views',
       'VRV Air Conditioning & Italian Marble',
     ]
+  },
+
+  // --- WEGROW REFERENCE FLAGSHIP PROJECTS ---
+  // DLF The Camellias - Sector 42 Golf Course Road
+  {
+    _id: 'proj-dlf-camellias',
+    name: 'DLF The Camellias',
+    slug: 'dlf-the-camellias-golf-course-road',
+    tagline: 'Starts from ₹69.99 Cr onwards | India’s Most Coveted Super-Luxury Golf Address',
+    description: 'DLF The Camellias on Golf Course Road, Sector 42, Gurugram, stands as the zenith of super-luxury living in India. Overlooking the lush 18-hole Gary Player golf course and Aravalli horizons. Bespoke ultra-luxury penthouses and apartments featuring private elevator lobbies, grand wraparound decks, and a 1.6-lakh sq.ft. seven-star clubhouse with Olympic-sized pools and helipad.',
+    projectType: 'Residential',
+    developer: 'dev-dlf',
+    city: 'city-1',
+    locality: 'loc-1',
+    address: 'Golf Course Road, DLF Phase 5, Sector 42, Gurugram, Haryana 122002',
+    reraNumber: 'RC/REP/HARERA/GGM/2014/01',
+    possession: 'Ready to Move',
+    possessionDate: '2024-06-30',
+    status: 'READY_TO_MOVE',
+    priceMin: 699900000,
+    priceMax: 1200000000,
+    sizeRange: '7,400 - 16,000 sq.ft.',
+    configurations: ['4 BHK Super Luxury Residences (7,400 sq.ft)', '5 BHK Presidential Suites (9,500 sq.ft)', 'Signature Duplex Penthouses (16,000 sq.ft)'],
+    totalAreaAcres: 17.5,
+    featured: true,
+    images: [
+      '/listings/dlf-camellias/image_1.jpg',
+      'https://api.wegrowinfraventures.com/public/images/property/upload-1752672886220.jpg'
+    ],
+    amenities: [
+      '1.6 Lakh Sq.Ft. Resort-Style Clubhouse',
+      'Panoramic 18-Hole Gary Player Golf Course View',
+      'Private High-Speed Elevator Lobbies',
+      'Heated Indoor & Outdoor Olympic Pools',
+      'Helipad & High-Security Multi-Tier Access'
+    ]
+  },
+  // Elan The Presidential - Sector 106 Dwarka Expressway
+  {
+    _id: 'proj-elan-presidential',
+    name: 'Elan The Presidential',
+    slug: 'elan-the-presidential-sector-106',
+    tagline: 'Starts from ₹4.99 Cr onwards | Ultra-Luxury Residences on Dwarka Expressway',
+    description: 'Elan The Presidential in Sector 106, Dwarka Expressway Gurugram, is a marquee 30-acre residential landmark featuring futuristic aerodynamic towers, expansive central water lagoons, private plunge pools, and triple-height lobbies designed by UHA London.',
+    projectType: 'Residential',
+    developer: 'dev-elan',
+    city: 'city-1',
+    locality: 'loc-1',
+    address: 'Sector 106, Dwarka Expressway Corridor, Gurugram, Haryana 122006',
+    reraNumber: 'RC/REP/HARERA/GGM/647/379/2022/122',
+    possession: 'In 2027',
+    possessionDate: '2027-12-31',
+    status: 'UNDER_CONSTRUCTION',
+    priceMin: 49900000,
+    priceMax: 120000000,
+    sizeRange: '2,450 - 5,200 sq.ft.',
+    configurations: ['3 BHK Presidential Suites (2,450 sq.ft)', '4 BHK Luxury Residences (3,100 sq.ft)', '5 BHK Grand Mansions (5,200 sq.ft)'],
+    totalAreaAcres: 30.0,
+    featured: true,
+    images: [
+      '/listings/elan-presidential/image_1.webp',
+      'https://api.wegrowinfraventures.com/public/images/property/upload-1752673513745.webp'
+    ],
+    amenities: [
+      'Over 5 Acres Central Water Bodies & Lagoons',
+      'Grand Triple-Height Designer Entrance Lobbies',
+      'Wrap-Around Sundecks with Aerodynamic Architecture',
+      'Olympic-Sized Swimming Pool & Spa Cabanas',
+      'Direct Zero-KM Dwarka Expressway Access'
+    ]
+  },
+  // Smartworld One DXP - Sector 113 Dwarka Expressway
+  {
+    _id: 'proj-sw-onedxp',
+    name: 'Smartworld One DXP',
+    slug: 'smartworld-one-dxp-sector-113',
+    tagline: 'Starts from ₹2.99 Cr onwards | The First Address of Dwarka Expressway at Delhi Border',
+    description: 'Smartworld One DXP is strategically situated at Sector 113, right on the Delhi-Gurgaon border along Dwarka Expressway. Offers 2.5 BHK and 3.5 BHK smart residences with resort-style double-height club lounges, lagoon pools, and 24x7 co-working suites.',
+    projectType: 'Residential',
+    developer: 'dev-smartworld',
+    city: 'city-1',
+    locality: 'loc-1',
+    address: 'Sector 113, Dwarka Expressway, Right on Delhi-Gurgaon Border, Haryana 122017',
+    reraNumber: 'RC/REP/HARERA/GGM/645/377/2022/120',
+    possession: 'In 2027',
+    possessionDate: '2027-12-31',
+    status: 'UNDER_CONSTRUCTION',
+    priceMin: 29900000,
+    priceMax: 65000000,
+    sizeRange: '1,370 - 2,600 sq.ft.',
+    configurations: ['2.5 BHK Smart Luxury (1,370 sq.ft)', '3.5 BHK + Utility (1,850 sq.ft)', '4.5 BHK Master Suites (2,600 sq.ft)'],
+    totalAreaAcres: 16.0,
+    featured: true,
+    images: [
+      '/listings/smartworld-onedxp/image_1.webp',
+      'https://api.wegrowinfraventures.com/public/images/property/upload-1769327575019.webp'
+    ],
+    amenities: [
+      'Zero Kms from Delhi & 7 Mins from IGI Airport',
+      'Resort Lagoon Pools & Aqua Cabanas',
+      'Double-Height Glass Clubhouse with Co-working Pods',
+      'Smart Home Automation with Mobile App Controls',
+      'Dedicated Running & Cycling Tracks'
+    ]
+  },
+  // Signature Global Titanium SPR - Sector 71 SPR
+  {
+    _id: 'proj-sg-titanium',
+    name: 'Signature Global Titanium SPR',
+    slug: 'signature-global-titanium-spr-sector-71',
+    tagline: 'Starts from ₹4.70 Cr onwards | Ultra-Luxury Sky Residences on Southern Peripheral Road',
+    description: 'Signature Global Titanium SPR in Sector 71 Gurugram is a landmark 40-storey ultra-luxury residential marvel on SPR. Featuring private sky gardens, double-height cantilevered balconies, infinity-edge swimming pool at 100 meters, and lush Aravalli vistas.',
+    projectType: 'Residential',
+    developer: 'dev-signature',
+    city: 'city-1',
+    locality: 'loc-1',
+    address: 'Sector 71, Southern Peripheral Road (SPR), Gurugram, Haryana 122004',
+    reraNumber: 'RC/REP/HARERA/GGM/828/560/2024/55',
+    possession: 'In 2028',
+    possessionDate: '2028-12-31',
+    status: 'NEW_LAUNCH',
+    priceMin: 47000000,
+    priceMax: 95000000,
+    sizeRange: '2,780 - 3,780 sq.ft.',
+    configurations: ['3.5 BHK Sky Mansions (2,780 sq.ft)', '4.5 BHK Titanium Penthouses (3,780 sq.ft)'],
+    totalAreaAcres: 14.3,
+    featured: true,
+    images: [
+      '/listings/signature-global/titanium_spr.webp',
+      'https://api.wegrowinfraventures.com/public/images/property/upload-1770105241385.webp'
+    ],
+    amenities: [
+      'Sky Gardens & Sky Lounges at 100 Meters',
+      'Double-Height Cantilevered Wrap-around Balconies',
+      'Ultra-Luxury Clubhouse with Spa & Bowling Alley',
+      'Panoramic Aravalli & City Skyline Vistas',
+      'Seamless Direct Access to SPR & Golf Course Ext Road'
+    ]
+  },
+  // M3M Mansion - Sector 113 Dwarka Expressway
+  {
+    _id: 'proj-m3m-mansion',
+    name: 'M3M Mansion',
+    slug: 'm3m-mansion-sector-113',
+    tagline: 'Starts from ₹3.99 Cr onwards | Smart Luxury Residences at Delhi Border',
+    description: 'M3M Mansion at SCDA Sector 113 on Dwarka Expressway is an ultra-exclusive residential enclave inspired by classical European palace architecture. Boasting golf views, expansive water bodies, personal concierge services, and bespoke penthouses.',
+    projectType: 'Residential',
+    developer: 'dev-1',
+    city: 'city-1',
+    locality: 'loc-1',
+    address: 'Sector 113, Smart City Delhi Airport Corridor, Gurugram, Haryana 122017',
+    reraNumber: 'RC/REP/HARERA/GGM/807/539/2024/34',
+    possession: 'In 2028',
+    possessionDate: '2028-12-31',
+    status: 'NEW_LAUNCH',
+    priceMin: 39900000,
+    priceMax: 85000000,
+    sizeRange: '2,100 - 3,500 sq.ft.',
+    configurations: ['3.5 BHK European Mansions (2,100 sq.ft)', '4.5 BHK Royal Suites (3,500 sq.ft)'],
+    totalAreaAcres: 10.0,
+    featured: true,
+    images: [
+      '/listings/m3m-mansion/image_1.webp',
+      'https://api.wegrowinfraventures.com/public/images/property/upload-1769494695319.webp'
+    ],
+    amenities: [
+      'Adjacent to 250-Acre Golf Course & Diplomatic Enclave II',
+      'European Classical Architecture & Marble Pavilions',
+      'Private Temperature-Controlled Plunge Pools',
+      'Ultra-Luxe Sky Club & Wellness Sanctuary',
+      'Direct Zero Kms Connectivity to Delhi Border'
+    ]
   }
+
 ];
 
 export const PROPERTIES = [
   // 1. M3M Route 65 - Sector 65 Gurugram (Pre-Leased Shop with 6% Returns)
   {
     _id: 'prop-1',
-    title: 'M3M Route 65 - Pre-Leased Retail Shop with 6% Assured Returns',
+    title: 'M3M Route 65 - Pre-Leased Retail Shop (Starts ₹75 Lac)',
     slug: 'm3m-route-65-pre-leased-retail-shop-sector-65',
-    description: 'M3M Route 65 on prime Golf Course Extension Road, Sector 65 Gurugram. Offering verified pre-leased retail shop investment starting 85 Lacs onwards yielding 6% assured returns. High footfall commercial boulevard with top tier retail brands and dining anchors.',
+    description: 'M3M Route 65 on prime Golf Course Extension Road, Sector 65 Gurugram. Offering verified pre-leased retail shop investment starting 75 Lacs onwards yielding 6% assured returns. High footfall commercial boulevard with top tier retail brands and dining anchors.',
     propertyType: 'Retail Shop',
     transactionType: 'Buy',
-    price: 8500000,
+    price: 7500000,
     area: 450,
     carpetArea: 320,
     bedrooms: 0,
@@ -1300,10 +1451,7 @@ export const PROPERTIES = [
     status: 'PUBLISHED',
     viewsCount: 3820,
     createdAt: '2026-10-01T10:00:00.000Z',
-    images: [
-      '/listings/m3m-commercial/image_1.jpg',
-      '/listings/m3m-broadway/image_1.jpg',
-    ],
+    images: ['/listings/m3m-route65/image_1.webp', 'https://api.wegrowinfraventures.com/public/images/property/upload-1768549043036.webp'],
     amenities: [
       'Pre-Leased Shop with 6% Assured Returns',
       'Prime Sector 65 Golf Course Ext Road',
@@ -1318,12 +1466,12 @@ export const PROPERTIES = [
   // 2. M3M Jewel - MG Road Gurugram (Pre-Leased Shop with 6% Returns)
   {
     _id: 'prop-3',
-    title: 'M3M Jewel - Pre-Leased Hybrid Retail Shop with 6% Returns',
+    title: 'M3M Jewel MG Road - Pre-Leased Luxury Retail Shop',
     slug: 'm3m-jewel-pre-leased-hybrid-retail-mg-road',
-    description: 'M3M Jewel MG Road Gurugram - Gurugram first hybrid luxury retail destination positioned 2 minutes from Cyber City. Verified pre-leased commercial shop investment with 6% returns. Price on Request.',
+    description: 'M3M Jewel MG Road Gurugram - Gurugram first hybrid luxury retail destination positioned 2 minutes from Cyber City. Verified pre-leased commercial shop investment starting ₹2.5 Cr onwards with 6% returns.',
     propertyType: 'Retail Shop',
     transactionType: 'Buy',
-    price: 0,
+    price: 25000000,
     area: 480,
     carpetArea: 340,
     bedrooms: 0,
@@ -1347,10 +1495,7 @@ export const PROPERTIES = [
     status: 'PUBLISHED',
     viewsCount: 3450,
     createdAt: '2026-10-01T11:00:00.000Z',
-    images: [
-      '/listings/m3m-broadway/image_1.jpg',
-      '/listings/m3m-commercial/image_1.jpg',
-    ],
+    images: ['/listings/m3m-jewel/image_1.webp', '/listings/m3m-jewel/image_crest.webp', 'https://api.wegrowinfraventures.com/public/images/property/upload-1768819366165.webp'],
     amenities: [
       'Pre-Leased with 6% Assured Returns',
       '2 Mins to Cyber City & MG Road Metro',
@@ -1366,10 +1511,10 @@ export const PROPERTIES = [
     _id: 'prop-4',
     title: 'SPJ Vedatam - High-Street Retail Shop Sector 14 Gurugram',
     slug: 'spj-vedatam-sector-14-gurgaon',
-    description: 'SPJ Vedatam by SPJ Group on Old Delhi-Gurgaon Road, Sector 14, Gurugram. Designed by acclaimed ACPL Architects. High-street retail shop investment starting 50 Lacs onwards (Under Construction). Registered HARERA: RC/REP/HARERA/GGM/897/629/2025/110.',
+    description: 'SPJ Vedatam by SPJ Group on Old Delhi-Gurgaon Road, Sector 14, Gurugram. Designed by acclaimed ACPL Architects. High-street retail shop investment starting 70 Lacs onwards (Under Construction). Registered HARERA: RC/REP/HARERA/GGM/897/629/2025/110.',
     propertyType: 'Retail Shop',
     transactionType: 'Buy',
-    price: 5000000,
+    price: 7000000,
     area: 350,
     carpetArea: 250,
     bedrooms: 0,
@@ -1393,13 +1538,7 @@ export const PROPERTIES = [
     status: 'PUBLISHED',
     viewsCount: 2950,
     createdAt: '2026-10-06T10:00:00.000Z',
-    images: [
-      '/listings/spj-vedatam/image_1.jpg',
-      '/listings/spj-vedatam/image_2.jpg',
-      '/listings/spj-vedatam/image_3.jpg',
-      '/listings/spj-vedatam/image_4.jpg',
-      '/listings/spj-vedatam/image_5.jpg',
-    ],
+    images: ['/listings/spj-vedatam/wegrow_main.webp', '/listings/spj-vedatam/image_1.jpg'],
     amenities: [
       'High-Street Retail Promenade',
       'Designed by ACPL Architects',
@@ -1416,10 +1555,10 @@ export const PROPERTIES = [
     _id: 'prop-paragon57',
     title: 'M3M Paragon 57 - High-Street Commercial Showroom Sector 57',
     slug: 'm3m-paragon-57-high-street-retail-sector-57',
-    description: 'M3M Paragon 57 in Sector 57, Gurugram. Ultra-luxury open-air retail destination with high footfall corner visibility along Golf Course Extension Road. Price on Request.',
+    description: 'M3M Paragon 57 in Sector 57, Gurugram. Ultra-luxury open-air retail destination with high footfall corner visibility along Golf Course Extension Road. Investment starts ₹80 Lacs onwards.',
     propertyType: 'Retail Shop',
     transactionType: 'Buy',
-    price: 0,
+    price: 8000000,
     area: 550,
     carpetArea: 400,
     bedrooms: 0,
@@ -1443,10 +1582,7 @@ export const PROPERTIES = [
     status: 'PUBLISHED',
     viewsCount: 2420,
     createdAt: '2026-10-15T10:00:00.000Z',
-    images: [
-      '/listings/m3m-commercial/image_1.jpg',
-      '/listings/m3m-broadway/image_1.jpg',
-    ],
+    images: ['/listings/m3m-paragon57/image_1.webp', 'https://api.wegrowinfraventures.com/public/images/property/upload-1752573799412.webp'],
     amenities: [
       'Open-Air High-Street Courtyard',
       'Dual Road Corner Visibility',
@@ -1460,12 +1596,12 @@ export const PROPERTIES = [
   // 5. M3M Antalya Hills - Sector 79 Gurugram (Buy)
   {
     _id: 'prop-antalya79',
-    title: 'M3M Antalya Hills - 2.5 BHK Luxury Floors Sector 79',
+    title: 'M3M Antalya Hills - 2.5 BHK Luxury Nature Floors Sector 79',
     slug: 'm3m-antalya-hills-2-5bhk-luxury-floors-sector-79',
-    description: 'M3M Antalya Hills Sector 79 Gurugram. Luxury low-rise residential floors at the foothills of the Aravallis. Investment starts 1.25 Cr onwards with flexible payment plans. Ready to move and under construction both options available.',
+    description: 'M3M Antalya Hills Sector 79 Gurugram. Luxury low-rise residential floors at the foothills of the Aravallis. Investment starts 1.29 Cr onwards with flexible payment plans. Ready to move and under construction both options available.',
     propertyType: 'Apartment',
     transactionType: 'Buy',
-    price: 12500000,
+    price: 12900000,
     area: 1280,
     carpetArea: 890,
     bedrooms: 2,
@@ -1489,10 +1625,7 @@ export const PROPERTIES = [
     status: 'PUBLISHED',
     viewsCount: 3100,
     createdAt: '2026-10-15T12:00:00.000Z',
-    images: [
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
-    ],
+    images: ['/listings/m3m-antalya79/image_1.webp', 'https://api.wegrowinfraventures.com/public/images/property/upload-1770109086339.webp'],
     amenities: [
       'Aravalli Foothills Panoramic Views',
       'Flexible Payment Plans',
@@ -1506,12 +1639,12 @@ export const PROPERTIES = [
   // 6. Smart World Manesar - Manesar Gurugram (Buy)
   {
     _id: 'prop-sw-manesar',
-    title: 'Smart World Manesar - 2 BHK Smart Residences',
+    title: 'Smartworld Nature\'s Court Manesar - 2 BHK Nature Residences',
     slug: 'smart-world-manesar-2bhk-smart-residences',
-    description: 'Smart World Manesar - Contemporary smart living community on the IMT Manesar corridor. Under construction with flexible payment plans. Features smart home automation and lifestyle clubhouse amenities.',
+    description: 'Smartworld Nature\'s Court Manesar - Contemporary smart living community on the IMT Manesar corridor. Under construction with flexible payment plans starting ₹1.28 Cr onwards. Features smart home automation and lifestyle clubhouse amenities.',
     propertyType: 'Apartment',
     transactionType: 'Buy',
-    price: 6800000,
+    price: 12800000,
     area: 1050,
     carpetArea: 760,
     bedrooms: 2,
@@ -1535,10 +1668,7 @@ export const PROPERTIES = [
     status: 'PUBLISHED',
     viewsCount: 2280,
     createdAt: '2026-10-16T10:00:00.000Z',
-    images: [
-      'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80',
-    ],
+    images: ['/listings/smartworld-manesar/image_1.webp', 'https://api.wegrowinfraventures.com/public/images/property/upload-1768629775417.webp'],
     amenities: [
       'Flexible Payment Plans',
       'Singapore-Inspired Architecture',
@@ -1553,10 +1683,10 @@ export const PROPERTIES = [
     _id: 'prop-forestia',
     title: 'M3M Forestia Manesar - 2 BHK Nature Residences',
     slug: 'm3m-forestia-manesar-2bhk-nature-residences',
-    description: 'M3M Forestia Manesar - Nature-inspired green residences under construction with flexible payment plans. Surrounded by pristine green tree groves and peaceful open landscapes.',
+    description: 'M3M Forestia Manesar - Nature-inspired green residences under construction with flexible payment plans starting ₹2.40 Cr onwards (East & West Wings). Surrounded by pristine green tree groves and peaceful open landscapes.',
     propertyType: 'Apartment',
     transactionType: 'Buy',
-    price: 8500000,
+    price: 24000000,
     area: 1200,
     carpetArea: 860,
     bedrooms: 2,
@@ -1580,10 +1710,7 @@ export const PROPERTIES = [
     status: 'PUBLISHED',
     viewsCount: 2150,
     createdAt: '2026-10-16T11:00:00.000Z',
-    images: [
-      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-    ],
+    images: ['/listings/m3m-forestia/image_1.webp', '/listings/m3m-forestia/image_east.webp', 'https://api.wegrowinfraventures.com/public/images/property/upload-1784791212432.webp'],
     amenities: [
       'Flexible Payment Plans',
       'Dense Green Forest Canopy',
@@ -1625,10 +1752,7 @@ export const PROPERTIES = [
     status: 'PUBLISHED',
     viewsCount: 3650,
     createdAt: '2026-10-18T10:00:00.000Z',
-    images: [
-      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-    ],
+    images: ['/listings/signature-global/city_of_colours.webp'],
     amenities: [
       'Low-Rise G+4 Independent Floor',
       'Dedicated Basement Office Space',
@@ -1672,10 +1796,7 @@ export const PROPERTIES = [
     status: 'PUBLISHED',
     viewsCount: 3120,
     createdAt: '2026-10-18T10:30:00.000Z',
-    images: [
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
-    ],
+    images: ['/listings/signature-global/city_of_colours.webp'],
     amenities: [
       'Low-Rise G+4 Independent Floor',
       'Dedicated Basement Office Space',
@@ -1717,9 +1838,7 @@ export const PROPERTIES = [
     status: 'PUBLISHED',
     viewsCount: 1450,
     createdAt: '2026-10-18T11:00:00.000Z',
-    images: [
-      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
-    ],
+    images: ['/listings/signature-global/city_of_colours.webp'],
     amenities: [
       'Low-Rise G+4 Independent Floor',
       'Semi-Furnished with Modular Kitchen',
@@ -1761,10 +1880,7 @@ export const PROPERTIES = [
     status: 'PUBLISHED',
     viewsCount: 2840,
     createdAt: '2026-10-18T12:00:00.000Z',
-    images: [
-      'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80',
-    ],
+    images: ['/listings/signature-global/daxin_vistas.webp'],
     amenities: [
       'Low-Rise G+4 Independent Living',
       'Basement Work & Utility Space',
@@ -1806,10 +1922,7 @@ export const PROPERTIES = [
     status: 'PUBLISHED',
     viewsCount: 2510,
     createdAt: '2026-10-18T12:30:00.000Z',
-    images: [
-      'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80',
-    ],
+    images: ['/listings/signature-global/daxin_vistas.webp'],
     amenities: [
       'Low-Rise G+4 Floor',
       'Private Terrace Garden',
@@ -1851,9 +1964,7 @@ export const PROPERTIES = [
     status: 'PUBLISHED',
     viewsCount: 1220,
     createdAt: '2026-10-18T13:00:00.000Z',
-    images: [
-      'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80',
-    ],
+    images: ['/listings/signature-global/daxin_vistas.webp'],
     amenities: [
       'Low-Rise G+4 Floor',
       'Modular Kitchen & Wardrobes',
@@ -1894,10 +2005,7 @@ export const PROPERTIES = [
     status: 'PUBLISHED',
     viewsCount: 3380,
     createdAt: '2026-10-19T10:00:00.000Z',
-    images: [
-      'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
-    ],
+    images: ['/listings/signature-global/sarvam_37d.webp'],
     amenities: [
       'Dwarka Expressway Direct Access',
       'Low-Rise G+4 Floor',
@@ -1940,10 +2048,7 @@ export const PROPERTIES = [
     status: 'PUBLISHED',
     viewsCount: 3100,
     createdAt: '2026-10-19T10:30:00.000Z',
-    images: [
-      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80',
-    ],
+    images: ['/listings/signature-global/sarvam_37d.webp'],
     amenities: [
       'Dwarka Expressway Location',
       'Low-Rise G+4 Independent Floor',
@@ -1985,9 +2090,7 @@ export const PROPERTIES = [
     status: 'PUBLISHED',
     viewsCount: 1650,
     createdAt: '2026-10-19T11:00:00.000Z',
-    images: [
-      'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80',
-    ],
+    images: ['/listings/signature-global/sarvam_37d.webp'],
     amenities: [
       'Dwarka Expressway Access',
       'Semi-Furnished',
@@ -2162,10 +2265,7 @@ export const PROPERTIES = [
     status: 'PUBLISHED',
     viewsCount: 3890,
     createdAt: '2026-10-20T10:00:00.000Z',
-    images: [
-      'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
-    ],
+    images: ['/listings/signature-global/twin_tower_dxp.webp'],
     amenities: [
       'Ready to Move High-Rise Tower',
       'Dwarka Expressway Strategic Location',
@@ -2208,9 +2308,7 @@ export const PROPERTIES = [
     status: 'PUBLISHED',
     viewsCount: 1720,
     createdAt: '2026-10-20T10:30:00.000Z',
-    images: [
-      'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',
-    ],
+    images: ['/listings/signature-global/twin_tower_dxp.webp'],
     amenities: [
       'Ready to Move High-Rise Flat',
       'Semi-Furnished',
@@ -2251,10 +2349,7 @@ export const PROPERTIES = [
     status: 'PUBLISHED',
     viewsCount: 3410,
     createdAt: '2026-10-20T11:00:00.000Z',
-    images: [
-      'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1200&q=80',
-    ],
+    images: ['/listings/signature-global/titanium_spr.webp'],
     amenities: [
       'Ready to Move High-Rise Apartment',
       'Dwarka Expressway Connectivity',
@@ -2296,9 +2391,7 @@ export const PROPERTIES = [
     status: 'PUBLISHED',
     viewsCount: 1530,
     createdAt: '2026-10-20T11:30:00.000Z',
-    images: [
-      'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',
-    ],
+    images: ['/listings/signature-global/titanium_spr.webp'],
     amenities: [
       'Ready to Move High-Rise Flat',
       'Semi-Furnished',
@@ -2496,7 +2589,7 @@ export const PROPERTIES = [
     description: 'M3M Capital Walk is a grand signature commercial boulevard by M3M India. Boasting contemporary glass-fronted architecture, double-height showroom corridors, international luxury anchors, lush terrace restaurants, and animated dancing fountain plazas.',
     propertyType: 'Retail Shop',
     transactionType: 'Buy',
-    price: 17500000,
+    price: 10900000,
     area: 500,
     carpetArea: 375,
     bedrooms: 0,
@@ -2520,9 +2613,7 @@ export const PROPERTIES = [
     status: 'PUBLISHED',
     viewsCount: 2190,
     createdAt: '2026-10-06T12:00:00.000Z',
-    images: [
-      '/listings/m3m-commercial/image_1.jpg'
-    ],
+    images: ['/listings/m3m-capitalwalk/image_1.webp', 'https://api.wegrowinfraventures.com/public/images/property/upload-1784801271104.webp'],
     amenities: [
       'Double-Height Flagship Showroom Façade',
       'Grand Illuminated Fountain Plaza',
@@ -2541,7 +2632,7 @@ export const PROPERTIES = [
     description: 'M3M Broadway Sector 71 Gurugram is a grand mixed-use lifestyle destination offering seamless two-sided frontage on a 150-meter-wide road. Designed by world-renowned architects, featuring flowing wrap-around balconies, double-height retail showrooms, rooftop restaurants, and 10-screen multiplex.',
     propertyType: 'Retail Shop',
     transactionType: 'Buy',
-    price: 19000000,
+    price: 11600000,
     area: 500,
     carpetArea: 375,
     bedrooms: 0,
@@ -2565,9 +2656,7 @@ export const PROPERTIES = [
     status: 'PUBLISHED',
     viewsCount: 2680,
     createdAt: '2026-10-06T13:00:00.000Z',
-    images: [
-      '/listings/m3m-broadway/image_1.jpg'
-    ],
+    images: ['/listings/m3m-broadway/wegrow_main.webp', '/listings/m3m-broadway/image_1.jpg'],
     amenities: [
       'Iconic Curvilinear Architectural Facade',
       'Cantilevered Open-Air Terrace Seating',
@@ -2630,7 +2719,7 @@ export const PROPERTIES = [
     description: 'M3M Crown in Sector 111, Dwarka Expressway Gurugram, presents an ultra-luxury 3 BHK residence boasting direct views of 5.5 acres of continuous central greens, grand amphitheatre, tranquil waterways, and Japanese koi ponds.',
     propertyType: 'Apartment',
     transactionType: 'Buy',
-    price: 31267500,
+    price: 29900000,
     area: 1895,
     carpetArea: 1420,
     bedrooms: 3,
@@ -2654,9 +2743,7 @@ export const PROPERTIES = [
     status: 'PUBLISHED',
     viewsCount: 2780,
     createdAt: '2026-10-06T13:30:00.000Z',
-    images: [
-      '/listings/m3m-crown/image_1.jpg'
-    ],
+    images: ['/listings/m3m-crown/wegrow_main.webp', '/listings/m3m-crown/image_1.jpg'],
     amenities: [
       'Amphitheatre & Central Greens View',
       '75,000 Sq.Ft. Luxury Clubhouse Access',
@@ -2673,7 +2760,7 @@ export const PROPERTIES = [
     description: 'The height of ultra-luxury living at Sector 65, Golf Course Extension Road. M3M Altitude offers iconic sky mansions with 130m sky club access, cantilevered infinity pool, private elevator lobby, and uninterrupted panoramic views.',
     propertyType: 'Apartment',
     transactionType: 'Buy',
-    price: 110600000,
+    price: 118900000,
     area: 3950,
     carpetArea: 3100,
     bedrooms: 4,
@@ -2697,16 +2784,233 @@ export const PROPERTIES = [
     status: 'PUBLISHED',
     viewsCount: 2450,
     createdAt: '2026-10-10T10:00:00.000Z',
-    images: [
-      '/listings/m3m-golfestate/image_1.jpg'
-    ],
+    images: ['/listings/m3m-altitude/image_1.webp', 'https://api.wegrowinfraventures.com/public/images/property/upload-1770119767447.webp'],
     amenities: [
       'Sky Lounge at 130m Height',
       'Cantilevered Heated Glass Pool',
       'Private Elevator Lobby',
       'VRV Air Conditioning & Italian Marble',
     ]
+  },
+
+  // --- WEGROW REFERENCE FLAGSHIP PROPERTIES ---
+  // DLF The Camellias - 4 BHK Super-Luxury Golf Suite
+  {
+    _id: 'prop-dlf-camellias',
+    title: 'DLF The Camellias - 4 BHK Super-Luxury Golf Facing Residence',
+    slug: 'dlf-the-camellias-4bhk-super-luxury-golf-facing-residence',
+    description: 'DLF The Camellias on Golf Course Road Sector 42 Gurugram. Ultra-luxurious 4 BHK residence spanning 7,400 sq.ft. with panoramic 18-hole golf course views, private elevator foyer, super-luxury fittings, and access to the iconic 1.6-lakh sq.ft. clubhouse. Investment starts ₹69.99 Cr onwards.',
+    propertyType: 'Apartment',
+    transactionType: 'Buy',
+    price: 699900000,
+    area: 7400,
+    carpetArea: 5800,
+    bedrooms: 4,
+    bathrooms: 5,
+    balconies: 3,
+    floor: 18,
+    totalFloors: 38,
+    furnishing: 'Semi-Furnished',
+    facing: 'North-East',
+    possession: 'Ready to Move',
+    reraNumber: 'RC/REP/HARERA/GGM/2014/01',
+    city: 'city-1',
+    locality: 'loc-1',
+    developer: 'dev-dlf',
+    project: 'proj-dlf-camellias',
+    address: 'Golf Course Road, DLF Phase 5, Sector 42, Gurugram, Haryana 122002',
+    latitude: 28.4612,
+    longitude: 77.0988,
+    featured: true,
+    verified: true,
+    status: 'PUBLISHED',
+    viewsCount: 9840,
+    createdAt: '2026-10-15T10:00:00.000Z',
+    images: [
+      '/listings/dlf-camellias/image_1.jpg',
+      'https://api.wegrowinfraventures.com/public/images/property/upload-1752672886220.jpg'
+    ],
+    amenities: [
+      '18-Hole Gary Player Golf Course Views',
+      '1.6 Lakh Sq.Ft. Clubhouse & Olympic Pools',
+      'Private High-Speed Elevator Lobbies',
+      'Helipad Access & 7-Star Hospitality Concierge',
+      'VRF Climate Control & Italian Marble Flooring'
+    ]
+  },
+  // Elan The Presidential - 3 BHK Luxury Suite Sector 106
+  {
+    _id: 'prop-elan-presidential',
+    title: 'Elan The Presidential - 3 BHK Luxury Suite Sector 106',
+    slug: 'elan-the-presidential-3bhk-luxury-suite-sector-106',
+    description: 'Elan The Presidential in Sector 106, Dwarka Expressway Gurugram. 3 BHK ultra-luxury apartment with wraparound balconies overlooking lush 5-acre central lagoons and futuristic architecture. Starts ₹4.99 Cr onwards.',
+    propertyType: 'Apartment',
+    transactionType: 'Buy',
+    price: 49900000,
+    area: 2450,
+    carpetArea: 1850,
+    bedrooms: 3,
+    bathrooms: 3,
+    balconies: 2,
+    floor: 12,
+    totalFloors: 32,
+    furnishing: 'Semi-Furnished',
+    facing: 'North-East',
+    possession: 'In 2027',
+    reraNumber: 'RC/REP/HARERA/GGM/647/379/2022/122',
+    city: 'city-1',
+    locality: 'loc-1',
+    developer: 'dev-elan',
+    project: 'proj-elan-presidential',
+    address: 'Sector 106, Dwarka Expressway Corridor, Gurugram, Haryana 122006',
+    latitude: 28.5124,
+    longitude: 77.0182,
+    featured: true,
+    verified: true,
+    status: 'PUBLISHED',
+    viewsCount: 4210,
+    createdAt: '2026-10-15T10:00:00.000Z',
+    images: [
+      '/listings/elan-presidential/image_1.webp',
+      'https://api.wegrowinfraventures.com/public/images/property/upload-1752673513745.webp'
+    ],
+    amenities: [
+      'Over 5 Acres Central Water Bodies & Lagoons',
+      'Grand Triple-Height Entrance Lobby',
+      'Wrap-Around Sundecks with Panoramic Views',
+      'Direct Zero-KM Dwarka Expressway Access'
+    ]
+  },
+  // Smartworld One DXP - 2.5 BHK Smart Residence Sector 113
+  {
+    _id: 'prop-sw-onedxp',
+    title: 'Smartworld One DXP - 2.5 BHK Smart Residence Sector 113',
+    slug: 'smartworld-one-dxp-2-5bhk-smart-residence-sector-113',
+    description: 'Smartworld One DXP at Sector 113, right on the Delhi-Gurgaon border on Dwarka Expressway. Premium 2.5 BHK smart residence starting ₹2.99 Cr onwards. Features double-height club lounges, lagoon pools, and instant 7-min drive to IGI Airport.',
+    propertyType: 'Apartment',
+    transactionType: 'Buy',
+    price: 29900000,
+    area: 1370,
+    carpetArea: 980,
+    bedrooms: 2,
+    bathrooms: 2,
+    balconies: 2,
+    floor: 9,
+    totalFloors: 28,
+    furnishing: 'Semi-Furnished',
+    facing: 'East',
+    possession: 'In 2027',
+    reraNumber: 'RC/REP/HARERA/GGM/645/377/2022/120',
+    city: 'city-1',
+    locality: 'loc-1',
+    developer: 'dev-smartworld',
+    project: 'proj-sw-onedxp',
+    address: 'Sector 113, Dwarka Expressway, Right on Delhi-Gurgaon Border, Haryana 122017',
+    latitude: 28.5284,
+    longitude: 77.0345,
+    featured: true,
+    verified: true,
+    status: 'PUBLISHED',
+    viewsCount: 5120,
+    createdAt: '2026-10-15T10:00:00.000Z',
+    images: [
+      '/listings/smartworld-onedxp/image_1.webp',
+      'https://api.wegrowinfraventures.com/public/images/property/upload-1769327575019.webp'
+    ],
+    amenities: [
+      'Zero Kms from Delhi & 7 Mins from IGI Airport',
+      'Resort Lagoon Pools & Aqua Cabanas',
+      'Double-Height Glass Clubhouse with Co-working Pods',
+      'Smart Home Automation with Mobile App Controls'
+    ]
+  },
+  // Signature Global Titanium SPR - 3.5 BHK Sky Residence Sector 71
+  {
+    _id: 'prop-sg-titanium',
+    title: 'Signature Global Titanium SPR - 3.5 BHK Sky Residence Sector 71',
+    slug: 'signature-global-titanium-spr-3-5bhk-sky-residence-sector-71',
+    description: 'Signature Global Titanium SPR in Sector 71 Gurugram. 3.5 BHK ultra-luxury sky mansion spanning 2,780 sq.ft. with private sky garden, double-height cantilevered balconies, and infinity-edge swimming pool at 100 meters. Starts ₹4.70 Cr onwards.',
+    propertyType: 'Apartment',
+    transactionType: 'Buy',
+    price: 47000000,
+    area: 2780,
+    carpetArea: 2150,
+    bedrooms: 3,
+    bathrooms: 4,
+    balconies: 3,
+    floor: 21,
+    totalFloors: 40,
+    furnishing: 'Semi-Furnished',
+    facing: 'North-East',
+    possession: 'In 2028',
+    reraNumber: 'RC/REP/HARERA/GGM/828/560/2024/55',
+    city: 'city-1',
+    locality: 'loc-1',
+    developer: 'dev-signature',
+    project: 'proj-sg-titanium',
+    address: 'Sector 71, Southern Peripheral Road (SPR), Gurugram, Haryana 122004',
+    latitude: 28.4112,
+    longitude: 77.0284,
+    featured: true,
+    verified: true,
+    status: 'PUBLISHED',
+    viewsCount: 4680,
+    createdAt: '2026-10-15T10:00:00.000Z',
+    images: [
+      '/listings/signature-global/titanium_spr.webp',
+      'https://api.wegrowinfraventures.com/public/images/property/upload-1770105241385.webp'
+    ],
+    amenities: [
+      'Sky Gardens & Sky Lounges at 100 Meters',
+      'Double-Height Cantilevered Wrap-around Balconies',
+      'Ultra-Luxury Clubhouse with Spa & Bowling Alley',
+      'Seamless Direct Access to SPR & Golf Course Ext Road'
+    ]
+  },
+  // M3M Mansion - 3.5 BHK European Palace Residence Sector 113
+  {
+    _id: 'prop-m3m-mansion',
+    title: 'M3M Mansion - 3.5 BHK European Palace Residence Sector 113',
+    slug: 'm3m-mansion-3-5bhk-european-palace-residence-sector-113',
+    description: 'M3M Mansion at Sector 113 on Dwarka Expressway. Classical European palace architecture inspired 3.5 BHK luxury residence overlooking 250-acre golf course. Investment starts ₹3.99 Cr onwards.',
+    propertyType: 'Apartment',
+    transactionType: 'Buy',
+    price: 39900000,
+    area: 2100,
+    carpetArea: 1620,
+    bedrooms: 3,
+    bathrooms: 3,
+    balconies: 2,
+    floor: 15,
+    totalFloors: 34,
+    furnishing: 'Semi-Furnished',
+    facing: 'North-East',
+    possession: 'In 2028',
+    reraNumber: 'RC/REP/HARERA/GGM/807/539/2024/34',
+    city: 'city-1',
+    locality: 'loc-1',
+    developer: 'dev-1',
+    project: 'proj-m3m-mansion',
+    address: 'Sector 113, Smart City Delhi Airport Corridor, Gurugram, Haryana 122017',
+    latitude: 28.5290,
+    longitude: 77.0350,
+    featured: true,
+    verified: true,
+    status: 'PUBLISHED',
+    viewsCount: 3890,
+    createdAt: '2026-10-15T10:00:00.000Z',
+    images: [
+      '/listings/m3m-mansion/image_1.webp',
+      'https://api.wegrowinfraventures.com/public/images/property/upload-1769494695319.webp'
+    ],
+    amenities: [
+      'Adjacent to 250-Acre Golf Course & Diplomatic Enclave II',
+      'European Classical Architecture & Marble Pavilions',
+      'Private Temperature-Controlled Plunge Pools',
+      'Direct Zero Kms Connectivity to Delhi Border'
+    ]
   }
+
 ];
 
 export const BLOGS = [
